@@ -1,10 +1,11 @@
-package ru.itis.demo.services;
+package ru.itis.demo.services.implementations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.itis.demo.dto.UserDto;
 import ru.itis.demo.models.User;
 import ru.itis.demo.repositories.UsersRepositoryInterface;
+import ru.itis.demo.services.interfaces.UsersServiceInterface;
 
 import java.util.List;
 

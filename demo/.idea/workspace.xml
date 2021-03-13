@@ -2,47 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97955cb0-80c5-4217-adc7-2daad963e3e6" name="Default Changelist" comment="fixing">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/FileUploadController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/storage/StorageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/storage/StorageFileNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/storage/StorageProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignInServiceInterfaceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/StorageServiceInterfaceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/SignInServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/StorageServiceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_in_page.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/upload_form.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork1" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork2" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Semestrovka2k1s" beforeDir="false" afterPath="$PROJECT_DIR$/../Semestrovka2k1s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UserAccountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/CookieHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/CookieHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/repositories/UsersRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/repositories/UsersRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/SignUpServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/SignUpServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/SignUpServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignUpServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/UsersServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/UsersServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/UsersServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/UsersServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/DemoApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/controllers/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/controllers/SignUpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/controllers/UsersController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto$UserDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto$UserDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/repositories/UsersRepositoryInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/repositories/UsersRepositoryInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/SignUpServiceInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/SignUpServiceInterfaceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/UsersServiceInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/UsersServiceInterfaceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../fxApp" beforeDir="false" afterPath="$PROJECT_DIR$/../fxApp" afterDir="false" />
     </list>
-    <list id="73568f9d-89b9-4714-af52-d4aa7b52ca60" name="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;" comment="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;&#10;&#10;This reverts commit 9a9a8371">
-      <change beforePath="$PROJECT_DIR$/../.idea/$PRODUCT_WORKSPACE_FILE$" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/IdeaProjects.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/DemoApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignUpController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UsersController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/dto/UserDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/dto/UserForm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/CookieHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/repositories/UsersRepositoryInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/SignUpServiceInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/SignUpServiceInterfaceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/UsersServiceInterface.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/UsersServiceInterfaceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/Resource Bundle 'messages'.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/messages/messages_ru_properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/itis/demo/DemoApplicationTests.java" beforeDir="false" />
-    </list>
+    <list id="73568f9d-89b9-4714-af52-d4aa7b52ca60" name="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;" comment="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;&#10;&#10;This reverts commit 9a9a8371" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,15 +122,23 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="newMaster" />
+        <entry key="$PROJECT_DIR$/.." value="test" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="RESET_MODE" value="MIXED" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1oa7KzFdUkz109a2oTMTc3YpniS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -133,14 +149,20 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="ru.itis.demo.services.interfaces" />
       <recent name="ru.itis.demo.services" />
     </key>
   </component>
   <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
     <option name="ruleStates">
       <list>
         <RuleState>
@@ -152,50 +174,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="SemesterWork3" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="SemesterWork3" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
+  <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
+    <configuration name="DemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.itis.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.itis.demo.DemoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -207,6 +195,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.DemoApplication (1)" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
@@ -215,13 +208,21 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2067d345" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66eb5283" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66eb5283" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2fae774d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
         </treeState>
       </serviceView>
     </option>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -241,6 +242,12 @@
       <workItem from="1614757033599" duration="4586000" />
       <workItem from="1614935298470" duration="1521000" />
       <workItem from="1614976742249" duration="5463000" />
+      <workItem from="1614984205397" duration="5647000" />
+      <workItem from="1615328718023" duration="12496000" />
+      <workItem from="1615569630635" duration="5385000" />
+      <workItem from="1615583524049" duration="3877000" />
+      <workItem from="1615589953829" duration="4808000" />
+      <workItem from="1615594799757" duration="1713000" />
     </task>
     <task id="LOCAL-00001" summary="sign up, some cookie, messages(need fix) etc">
       <created>1614981674044</created>
@@ -463,5 +470,21 @@
     <MESSAGE value="sign up, some cookie, messages(need fix) etc" />
     <MESSAGE value="revert" />
     <option name="LAST_COMMIT_MESSAGE" value="revert" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/FileUploadController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

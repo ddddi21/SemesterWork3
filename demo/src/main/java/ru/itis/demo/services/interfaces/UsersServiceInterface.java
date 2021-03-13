@@ -1,4 +1,4 @@
-package ru.itis.demo.services;
+package ru.itis.demo.services.interfaces;
 
 import ru.itis.demo.dto.UserDto;
 

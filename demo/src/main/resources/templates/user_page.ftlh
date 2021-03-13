@@ -8,20 +8,22 @@
     <title>Document</title>
 </head>
 <body>
+<h3>Hello ${userEmail}</h3>
+<h3>Ура</h3>
 <div>
 <#--    <h1><@spring.message 'users.page.welcome'></@spring.message></h1>-->
-    <table>
-        <tr>
-            <th>id</th>
-            <th>email</th>
-        </tr>
-        <#list usersList as user>
-            <tr>
-                <td>${user.id}</td>
-                <td>${user.email}</td>
-            </tr>
-        </#list>
-    </table>
+<#--    <table>-->
+<#--        <tr>-->
+<#--            <th>id</th>-->
+<#--            <th>email</th>-->
+<#--        </tr>-->
+<#--        <#list usersList as user>-->
+<#--            <tr>-->
+<#--                <td>${user.id}</td>-->
+<#--                <td>${user.email}</td>-->
+<#--            </tr>-->
+<#--        </#list>-->
+<#--    </table>-->
 </div>
 </body>
 </html>

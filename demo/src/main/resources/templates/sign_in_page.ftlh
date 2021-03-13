@@ -8,12 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Let's Sign Up!</h1>
-<form action="/signUp" method="post">
+<h1>Let's Sign in!</h1>
+<form action="/signIn" method="post">
     <input name="email" type="email" placeholder="EMAIL">
     <input name="password" type="password" placeholder="PASSWORD">
 
-    <input type="submit" value="SIGN UP">
+    <input type="submit" value="SIGN IN">
 </form>
 </body>
 </html>

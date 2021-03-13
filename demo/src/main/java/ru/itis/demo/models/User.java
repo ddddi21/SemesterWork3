@@ -20,4 +20,6 @@ public class User {
 
     private String email;
     private String password;
+
+    //todo(add another fields)
 }

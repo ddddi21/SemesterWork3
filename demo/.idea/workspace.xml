@@ -2,52 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97955cb0-80c5-4217-adc7-2daad963e3e6" name="Default Changelist" comment="fixing">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/FileUploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/storage/StorageException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/storage/StorageFileNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/storage/StorageProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignInServiceInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/StorageServiceInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/SignInServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/StorageServiceInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/error.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_in_page.ftlh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/upload_form.ftlh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/RootContoller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/security/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/security/details/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/security/details/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/all_user_page.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork1" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork2" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Semestrovka2k1s" beforeDir="false" afterPath="$PROJECT_DIR$/../Semestrovka2k1s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80d6a7bb-91ef-4a78-8c78-4294e144d84e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80d6a7bb-91ef-4a78-8c78-4294e144d84e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/80d6a7bb-91ef-4a78-8c78-4294e144d84e/storage_v2/_src_/database/db_sem_2.Tba4fA/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/80d6a7bb-91ef-4a78-8c78-4294e144d84e/storage_v2/_src_/database/db_sem_2.Tba4fA/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/DemoApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UserAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/CookieHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/helpers/CookieHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/UserAccountController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/repositories/UsersRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/repositories/UsersRepositoryInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/SignUpServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/SignUpServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/SignUpServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignUpServiceInterfaceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/UsersServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/UsersServiceInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/UsersServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/UsersServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignInServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignInServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignUpServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/SignUpServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/UsersServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/UsersServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/UsersServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/interfaces/UsersServiceInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign_in_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_in_page.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/upload_form.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/upload_form.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/DemoApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/controllers/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/controllers/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/controllers/UsersController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto$UserDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto$UserDtoBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/dto/UserForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/models/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/models/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/models/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/repositories/UsersRepositoryInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ru/itis/demo/repositories/UsersRepositoryInterface.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/SignUpServiceInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/SignUpServiceInterfaceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/UsersServiceInterface.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/itis/demo/services/UsersServiceInterfaceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../fxApp" beforeDir="false" afterPath="$PROJECT_DIR$/../fxApp" afterDir="false" />
     </list>
     <list id="73568f9d-89b9-4714-af52-d4aa7b52ca60" name="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;" comment="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;&#10;&#10;This reverts commit 9a9a8371" />
@@ -208,12 +196,26 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66eb5283" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fa972886" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@66eb5283" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@2fae774d" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fa972886" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@53716508" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@177461f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@177461f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@99d4a19" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@177461f6" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@7ed0ccce" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -247,7 +249,8 @@
       <workItem from="1615569630635" duration="5385000" />
       <workItem from="1615583524049" duration="3877000" />
       <workItem from="1615589953829" duration="4808000" />
-      <workItem from="1615594799757" duration="1713000" />
+      <workItem from="1615594799757" duration="6995000" />
+      <workItem from="1616196149345" duration="9448000" />
     </task>
     <task id="LOCAL-00001" summary="sign up, some cookie, messages(need fix) etc">
       <created>1614981674044</created>
@@ -256,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614981674044</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="file upload, sign in">
+      <created>1615596668043</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615596668044</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +479,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="sign up, some cookie, messages(need fix) etc" />
     <MESSAGE value="revert" />
-    <option name="LAST_COMMIT_MESSAGE" value="revert" />
+    <MESSAGE value="file upload, sign in" />
+    <option name="LAST_COMMIT_MESSAGE" value="file upload, sign in" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -483,6 +494,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/FileUploadController.java</url>
           <line>61</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/ProfileController.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/RootContoller.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

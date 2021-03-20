@@ -7,9 +7,9 @@
     <database id="2" parent="1" name="db_sem_2">
       <ObjectId>41039</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <IntrospectionStateNumber>860</IntrospectionStateNumber>
+      <IntrospectionStateNumber>882</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|41040|41042|1
+      <Relations>sequence|table|41055|41057|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -114,7 +114,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>861</IntrospectionStateNumber>
+      <IntrospectionStateNumber>883</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="22" parent="2" name="heap">
@@ -181,51 +181,110 @@
       <SchemaId>11</SchemaId>
     </extension>
     <sequence id="30" parent="21" name="account_id_seq">
-      <ObjectId>41040</ObjectId>
-      <StateNumber>857</StateNumber>
+      <ObjectId>41055</ObjectId>
+      <StateNumber>880</StateNumber>
       <Owner>user_for_sem1</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
     <table id="31" parent="21" name="account">
-      <ObjectId>41042</ObjectId>
+      <ObjectId>41057</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <StateNumber>857</StateNumber>
+      <StateNumber>880</StateNumber>
     </table>
-    <column id="32" parent="31" name="id">
+    <table id="32" parent="21" name="persistent_logins">
+      <ObjectId>41050</ObjectId>
+      <Owner>user_for_sem1</Owner>
+      <StateNumber>876</StateNumber>
+    </table>
+    <column id="33" parent="31" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>857</StateNumber>
+      <StateNumber>880</StateNumber>
       <TypeId>20</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="33" parent="31" name="email">
+    <column id="34" parent="31" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>857</StateNumber>
+      <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="34" parent="31" name="password">
+    <column id="35" parent="31" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>857</StateNumber>
+      <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="35" parent="31" name="account_pkey">
-      <ObjectId>41048</ObjectId>
-      <StateNumber>857</StateNumber>
+    <column id="36" parent="31" name="role">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>880</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="37" parent="31" name="state">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>880</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="38" parent="31" name="account_pkey">
+      <ObjectId>41063</ObjectId>
+      <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="36" parent="31" name="account_pkey">
-      <ObjectId>41049</ObjectId>
-      <StateNumber>857</StateNumber>
+    <key id="39" parent="31" name="account_pkey">
+      <ObjectId>41064</ObjectId>
+      <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>account_pkey</UnderlyingIndexName>
+    </key>
+    <column id="40" parent="32" name="username">
+      <Position>1</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>876</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="41" parent="32" name="series">
+      <Position>2</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>876</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="42" parent="32" name="token">
+      <Position>3</Position>
+      <DataType>varchar(64)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>876</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="32" name="last_used">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>876</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="44" parent="32" name="persistent_logins_pkey">
+      <ObjectId>41053</ObjectId>
+      <StateNumber>876</StateNumber>
+      <ColNames>series</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="45" parent="32" name="persistent_logins_pkey">
+      <ObjectId>41054</ObjectId>
+      <StateNumber>876</StateNumber>
+      <ColNames>series</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>persistent_logins_pkey</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

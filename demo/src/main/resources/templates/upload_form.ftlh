@@ -15,6 +15,7 @@
 
 <div>
     <form method="POST" enctype="multipart/form-data" action="/upload">
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
         <table>
             <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
             <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
@@ -23,6 +24,7 @@
 </div>
 
 <div>
+    <h4>Your files:</h4>
     <#list files as file>
         <ul>
         <li>

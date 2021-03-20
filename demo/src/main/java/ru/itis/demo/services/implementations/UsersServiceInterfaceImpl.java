@@ -19,4 +19,15 @@ public class UsersServiceInterfaceImpl implements UsersServiceInterface {
         List<User> users = usersRepositoryInterface.findAll();
         return UserDto.form(users);
     }
+
+    @Override
+    public void banAll() {
+        List<User> users = usersRepositoryInterface.findAll();
+        for(User user: users){
+            if(!user.isAdmin()){
+                user.setState(User.State.BANNED);
+                usersRepositoryInterface.save(user);
+            }
+        }
+    }
 }

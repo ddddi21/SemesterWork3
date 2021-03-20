@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface UsersServiceInterface {
     List<UserDto> getAllUsers();
+
+    void banAll();
 }

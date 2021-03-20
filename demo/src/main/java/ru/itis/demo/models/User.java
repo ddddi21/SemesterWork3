@@ -22,4 +22,31 @@ public class User {
     private String password;
 
     //todo(add another fields)
+
+    @Enumerated(value = EnumType.STRING)
+    private State state;
+
+    @Enumerated(value = EnumType.STRING)
+    private Role role;
+
+    public enum State {
+        ACTIVE, BANNED
+    }
+
+    public enum Role {
+        USER, ADMIN
+    }
+
+    public boolean isActive() {
+        return this.state == State.ACTIVE;
+    }
+
+    public boolean isBanned() {
+        return this.state == State.BANNED;
+    }
+
+    public boolean isAdmin() {
+        return this.role == Role.ADMIN;
+    }
+
 }

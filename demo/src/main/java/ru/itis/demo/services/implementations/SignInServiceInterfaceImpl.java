@@ -1,6 +1,7 @@
 package ru.itis.demo.services.implementations;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 import ru.itis.demo.dto.UserForm;
 import ru.itis.demo.models.User;
@@ -28,8 +29,9 @@ public class SignInServiceInterfaceImpl implements SignInServiceInterface {
     @Override
     public Boolean checkPassword(UserForm user) {
         if(isAlreadyExist(user)){
-            User new_user = usersRepositoryInterface.findByEmail(user.getEmail());
-            if (new_user.getPassword().equalsIgnoreCase(user.getPassword())){
+            User new_user = usersRepositoryInterface.findByEmail(user.getEmail()).orElseThrow(()-> new UsernameNotFoundException("User not found"));
+            if (
+                    new_user.getPassword().equalsIgnoreCase(user.getPassword())){
                 return true;
             }else return false;
         }else return false; //todo add error message later

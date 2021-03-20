@@ -9,6 +9,7 @@
 </head>
 <body>
 <h3>Hello ${userEmail}</h3>
+<h3>Hello</h3>
 <h3>Ура</h3>
 <div>
 <#--    <h1><@spring.message 'users.page.welcome'></@spring.message></h1>-->

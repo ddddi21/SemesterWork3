@@ -36,15 +36,22 @@ public class SignInController {
 
     //add cookie to "remember" if user want it
 
-    @PostMapping("/signIn")
-    public String SignIn(UserForm form, HttpServletResponse response, Model modelAndView){
-        if (!signInServiceInterface.isAlreadyExist(form)){
-            return "sign_in_page"; //todo add error message
-        } else {
-            if(signInServiceInterface.checkPassword(form)){
-                modelAndView.addAttribute("userEmail", form.getEmail()); //?? why don't work
-                return "user_page";
-            }else return "sign_in_page";
-        }
-    }
+//    @PostMapping("/signIn")
+//    public String SignIn(UserForm form, HttpServletResponse response, Model modelAndView){
+//        if (!signInServiceInterface.isAlreadyExist(form)){
+//            return "sign_in_page"; //todo add error message
+//        } else {
+//            if(signInServiceInterface.checkPassword(form)){
+//                modelAndView.addAttribute("userEmail", form.getEmail()); //?? why don't work
+//                return "user_page";
+//            }else return "sign_in_page";
+//        }
+//    }
+    //зря делала молодец, за тебя это все сделает спринг секьюрити
+//    @PostMapping("/signIn")
+//    public String SignIn(UserForm userForm, Model model){
+//        model.addAttribute("userEmail", userForm.getEmail());
+//        return "user_page";
+//    }
+    //как добавлять атрибуты тогда(((
 }

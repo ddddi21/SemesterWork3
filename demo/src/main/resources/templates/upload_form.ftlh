@@ -10,7 +10,7 @@
 <body>
 
 <#if message??>
-    <h2> ${message} </h2>
+    <h5> ${message} </h5>
 </#if>
 
 <div>

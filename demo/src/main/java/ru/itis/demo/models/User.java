@@ -21,6 +21,8 @@ public class User {
     private String email;
     private String password;
 
+    private String imagepath;
+
     //todo(add another fields)
 
     @Enumerated(value = EnumType.STRING)

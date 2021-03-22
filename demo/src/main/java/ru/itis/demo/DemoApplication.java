@@ -19,13 +19,13 @@ public class DemoApplication {
 
     }
 
-    @Bean
+/*    @Bean
     CommandLineRunner init(StorageServiceInterface storageService) {
         return (args) -> {
             storageService.deleteAll();
             storageService.init();
         };
-    }
+    }*/
 
     @Bean
     public PasswordEncoder passwordEncoder() {

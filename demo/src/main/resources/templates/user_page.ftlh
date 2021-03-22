@@ -11,7 +11,44 @@
 <h3>Hello ${userEmail}</h3>
 <h3>Hello</h3>
 <h3>Ура</h3>
+<br>
 <div>
+    <#if imagepath?has_content>
+        <img src="${imagepath}" class="m-x-auto img-fluid img-circle" alt="avatar" height="300" width="300">
+    <#else>
+        <img src="//placehold.it/150" class="m-x-auto img-fluid img-circle" alt="avatar" height="300" width="300">
+    </#if>
+
+    <#if message??>
+        <h5> ${message} </h5>
+    </#if>
+
+    <div>
+        <form method="POST" enctype="multipart/form-data" action="/upload">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+            <table>
+                <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+                <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+            </table>
+        </form>
+    </div>
+<#--    <button type="button" class="btn"><a href="/editUser">Редактировать</a></button>-->
+<#--    <div>-->
+<#--        <h4>Your files:</h4>-->
+<#--        <#list files as file>-->
+<#--            <ul>-->
+<#--                <li>-->
+<#--                    <a href="${file}"> ${file}-->
+<#--                </li>-->
+<#--            </ul>-->
+<#--        </#list>-->
+<#--            <ul>-->
+<#--                <li #each="file : ${files}">-->
+<#--                    <a th:href="${file}" th:text="${file}" />-->
+<#--                </li>-->
+<#--            </ul>-->
+<#--    </div>-->
+
 <#--    <h1><@spring.message 'users.page.welcome'></@spring.message></h1>-->
 <#--    <table>-->
 <#--        <tr>-->

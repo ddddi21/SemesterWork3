@@ -9,6 +9,8 @@ import org.springframework.web.multipart.MultipartFile;
 import ru.itis.demo.helpers.storage.StorageException;
 import ru.itis.demo.helpers.storage.StorageFileNotFoundException;
 import ru.itis.demo.helpers.storage.StorageProperties;
+import ru.itis.demo.models.User;
+import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.services.interfaces.StorageServiceInterface;
 
 import java.io.IOException;
@@ -23,6 +25,9 @@ import java.util.stream.Stream;
 @Service
 public class StorageServiceInterfaceImpl implements StorageServiceInterface {
     private final Path rootLocation;
+
+    @Autowired
+    private UsersRepositoryInterface usersRepositoryInterface;
 
     @Autowired
     public StorageServiceInterfaceImpl(StorageProperties properties) {
@@ -40,7 +45,7 @@ public class StorageServiceInterfaceImpl implements StorageServiceInterface {
     }
 
     @Override
-    public void store(MultipartFile file) {
+    public void store(MultipartFile file, User  user) {
         try {
             if (file.isEmpty()) {
                 throw new StorageException("Failed to store empty file.");
@@ -48,6 +53,10 @@ public class StorageServiceInterfaceImpl implements StorageServiceInterface {
             Path destinationFile = this.rootLocation.resolve(
                     Paths.get(file.getOriginalFilename()))
                     .normalize().toAbsolutePath();
+            if(usersRepositoryInterface.existsByEmail(user.getEmail())){
+                user.setImagepath(destinationFile.toString());
+                usersRepositoryInterface.save(user);
+            }
             if (!destinationFile.getParent().equals(this.rootLocation.toAbsolutePath())) {
                 // This is a security check
                 throw new StorageException(

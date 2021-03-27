@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<#import "spring.ftl" as spring/>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,7 +9,8 @@
     <title>Document</title>
 </head>
 <body>
-
+<h2><a href="?lang=ru">RU</a> </h2>
+<h2><a href="?lang=en">EN</a> </h2>
 <div>
     <#--    <h1><@spring.message 'users.page.welcome'></@spring.message></h1>-->
         <table>
@@ -26,7 +28,7 @@
 </div>
 <form method="post" action="/banAll">
     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-    <input type="submit" value="ban">
+    <input type="submit" value="<@spring.message 'all_user_page.banAll'></@spring.message>">
 </form>
 </body>
 </html>

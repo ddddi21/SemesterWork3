@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<#import "spring.ftl" as spring/>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -8,9 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-<h3>Hello ${userEmail}</h3>
-<h3>Hello</h3>
-<h3>Ура</h3>
+<h2><a href="?lang=ru">RU</a> </h2>
+<h2><a href="?lang=en">EN</a> </h2>
+<h3><@spring.message 'user_page.title'></@spring.message> ${userEmail}</h3>
 <br>
 <div>
     <#if imagepath?has_content>
@@ -27,8 +28,8 @@
         <form method="POST" enctype="multipart/form-data" action="/upload">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
             <table>
-                <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
-                <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+                <tr><td><@spring.message 'user_page.fileToUpload'></@spring.message></td><td><input type="file" name="file" /></td></tr>
+                <tr><td></td><td><input type="submit" value="<@spring.message 'user_page.upload'></@spring.message>" /></td></tr>
             </table>
         </form>
     </div>

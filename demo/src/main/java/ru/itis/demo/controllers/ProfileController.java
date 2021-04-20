@@ -21,7 +21,7 @@ public class ProfileController {
         System.out.println(user.getImagePath());
         String imagepath = user.getImagePath();
         String imgAsBase64 = "";
-        if(!imagepath.equals("null")) {
+        if(imagepath!=null) {
             File img = new File(user.getImagePath());
             byte[] data = Files.readAllBytes(img.toPath());
             byte[] encoded = Base64.getEncoder().encode(data);

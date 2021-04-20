@@ -11,6 +11,9 @@
 <h2><a href="?lang=ru">RU</a> </h2>
 <h2><a href="?lang=en">EN</a> </h2>
 <h1><@spring.message 'sign_up_page.title'></@spring.message></h1>
+<#if message??>
+    <h5> ${message} </h5>
+</#if>
 <form action="/signUp" method="post">
     <input name="email" type="email" placeholder="<@spring.message 'input_form.email'></@spring.message>">
     <input name="password" type="password" placeholder="<@spring.message 'input_form.password'></@spring.message>">

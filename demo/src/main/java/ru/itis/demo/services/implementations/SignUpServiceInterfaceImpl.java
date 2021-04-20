@@ -3,11 +3,14 @@ package ru.itis.demo.services.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
+import ru.itis.demo.dto.UserDto;
 import ru.itis.demo.dto.UserForm;
 import ru.itis.demo.models.User;
 import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.services.interfaces.SignUpServiceInterface;
 import sun.security.util.Password;
+
+import java.util.UUID;
 
 @Component
 public class SignUpServiceInterfaceImpl implements SignUpServiceInterface {
@@ -19,21 +22,25 @@ public class SignUpServiceInterfaceImpl implements SignUpServiceInterface {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public Boolean signUp(UserForm form) {
+    public UserDto signUp(UserForm form) {
         if(form.getEmail().isEmpty() || form.getPassword().isEmpty()){
             //delete when messages will be fixed
-            return false;
+            return null;
         } else {
-            User newUser = User.builder().email(form.getEmail()).
-                    password(passwordEncoder.encode(form.getPassword()))
+            String uuid = UUID.randomUUID().toString();
+            User newUser = User.builder()
+                    .email(form.getEmail())
+                    .password(passwordEncoder.encode(form.getPassword()))
                     .role(User.Role.USER)
-                    .state(User.State.ACTIVE).
-            build();
+//                    .state(User.State.ACTIVE)
+                    .currentConfirmationCode((uuid))
+                    .build();
             if(!usersRepositoryInterface.existsByEmail(newUser.getEmail())) {
                 usersRepositoryInterface.save(newUser);
-                return true;
-            } else return false;
+                return UserDto.from(newUser);
+            } else return null;
         }
     }
+
 
 }

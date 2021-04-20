@@ -13,7 +13,7 @@ import javax.annotation.security.PermitAll;
 public class RootContoller {
     @PermitAll
     @GetMapping
-    public String getRoot(Authentication authentication) { //NULL why
+    public String getRoot(Authentication authentication) {
         if (authentication != null) {
             return "redirect:/profile";
         } else {

@@ -13,6 +13,7 @@ public class SignInServiceInterfaceImpl implements SignInServiceInterface {
     @Autowired
     private UsersRepositoryInterface usersRepositoryInterface;
 
+    //not using
     @Override
     public Boolean signIn(UserForm form) {
         if(form.getEmail().isEmpty() || form.getPassword().isEmpty()){
@@ -26,6 +27,7 @@ public class SignInServiceInterfaceImpl implements SignInServiceInterface {
     }
 
 
+    //not using
     @Override
     public Boolean checkPassword(UserForm user) {
         if(isAlreadyExist(user)){

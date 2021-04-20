@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.itis.demo.dto.UserForm;
 
 import javax.persistence.*;
 
@@ -22,6 +23,7 @@ public class User {
     private String password;
 
     private String imagepath;
+    private String currentConfirmationCode;
 
     //todo(add another fields)
 
@@ -51,4 +53,11 @@ public class User {
         return this.role == Role.ADMIN;
     }
 
+    public static User fromSignUpForm(UserForm form) {
+        return User.builder()
+                .email(form.getEmail())
+                .role(Role.USER)
+                .state(State.ACTIVE)
+                .build();
+    }
 }

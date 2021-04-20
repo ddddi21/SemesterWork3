@@ -11,6 +11,21 @@
 <h2><a href="?lang=ru">RU</a> </h2>
 <h2><a href="?lang=en">EN</a> </h2>
 <h1><@spring.message 'sign_in_page.title'/></h1>
+<#if error?has_content>
+    <div class="reg-container">
+        <p>Error: ${error}</p>
+    </div>
+<#else>
+</#if>
+<#if message??>
+    <h5> ${message} </h5>
+</#if>
+<#if info?has_content>
+    <div class="reg-container">
+        <p>${info}</p>
+    </div>
+<#else>
+</#if>
 <form action="/signIn" method="post">
     <input name="email" type="email" placeholder="<@spring.message 'input_form.email'></@spring.message>">
     <input name="password" type="password" placeholder="<@spring.message 'input_form.password'></@spring.message>">

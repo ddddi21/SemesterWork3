@@ -21,13 +21,14 @@ public class ProfileController {
         System.out.println(user.getImagePath());
         String imagepath = user.getImagePath();
         String imgAsBase64 = "";
-        if(imagepath!=null) {
+        if(imagepath != null && !imagepath.equals("")) {
             File img = new File(user.getImagePath());
             byte[] data = Files.readAllBytes(img.toPath());
             byte[] encoded = Base64.getEncoder().encode(data);
             String imgDataAsBase64 = new String(encoded);
             imgAsBase64 = "data:image/png;base64," + imgDataAsBase64;
             //костыль
+            //поломалось почини
         }
 
         model.addAttribute("userEmail", user.getUsername());

@@ -7,6 +7,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.client.RestTemplate;
 import ru.itis.demo.helpers.storage.StorageProperties;
 import ru.itis.demo.services.interfaces.StorageServiceInterface;
 
@@ -18,6 +19,12 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
 
     }
+
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
 
 /*    @Bean
     CommandLineRunner init(StorageServiceInterface storageService) {

@@ -349,7 +349,11 @@
                         <label for="reg_useranem" class="sr-only">Username</label>
                         <input type="text" class="form-control" id="reg_username" name="username" placeholder="<@spring.message 'sign_up_page.username'/>">
                     </div>
-<#--                    <div class="form-group">-->
+                    <div class="form-group">
+                    <input name="phone" class="form-control" type="text" placeholder="<@spring.message 'sign_up_page.phone'/>">
+                    </div>
+
+                    <#--                    <div class="form-group">-->
 <#--                        <label for="reg_fullname" class="sr-only">Full Name</label>-->
 <#--                        <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">-->
 <#--                    </div>-->

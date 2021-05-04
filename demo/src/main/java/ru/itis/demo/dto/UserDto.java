@@ -21,6 +21,7 @@ public class UserDto {
     private String username;
     private String gender;
     private String code;
+    private String phone;
 
     public static UserDto from(User user){
         return UserDto.builder()
@@ -29,6 +30,7 @@ public class UserDto {
                 .code(user.getCurrentConfirmationCode())
                 .username(user.getUsername())
                 .gender(user.getGender())
+                .phone(user.getPhone())
                 .build();
     }
 

@@ -556,6 +556,7 @@
             <div class="etc-login-form">
                 <p><@spring.message 'sign_in_page.forgot'/><a href="#"><@spring.message 'sign_in_page.code_send_click'/></a></p>
                 <p><@spring.message 'sign_in_page.new_user'/><a href="/signUp"><@spring.message 'sign_in_page.to_sign_up'/></a></p>
+                <br>
                 <#if error?has_content>
                         <p>${error}</p>
                 </#if>

@@ -24,6 +24,7 @@ public class User {
     private String imagepath;
     private String currentConfirmationCode;
     private String gender;
+    private String phone;
 
     @Enumerated(value = EnumType.STRING)
     private State state;

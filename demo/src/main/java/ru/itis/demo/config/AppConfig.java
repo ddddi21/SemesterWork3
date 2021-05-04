@@ -1,6 +1,7 @@
 package ru.itis.demo.config;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,6 +25,10 @@ import java.util.concurrent.Executors;
 public class AppConfig {
     private final Environment environment;
 
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
+        return new PropertySourcesPlaceholderConfigurer();
+    }
     @Bean
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();

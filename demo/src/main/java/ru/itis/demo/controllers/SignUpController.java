@@ -9,6 +9,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.itis.demo.dto.SignUpFormDto;
 import ru.itis.demo.dto.UserDto;
 import ru.itis.demo.dto.SignInFormDto;
+import ru.itis.demo.services.implementations.SmsServiceImpl;
 import ru.itis.demo.services.interfaces.EmailServiceInterface;
 import ru.itis.demo.services.interfaces.SignUpServiceInterface;
 
@@ -19,6 +20,9 @@ public class SignUpController {
 
     @Autowired
     private EmailServiceInterface emailSenderServiceInterface;
+
+    @Autowired
+    private SmsServiceImpl smsService;
 
     @GetMapping("/signUp")
     public String getSignUpPage() {
@@ -40,6 +44,7 @@ public class SignUpController {
 //        if(form.getPassword()|| form.) //add empty fields checking
                 if ((userDto = signUpServiceInterface.signUp(form)) != null) {
                     emailSenderServiceInterface.sendEmail(userDto);
+                    smsService.sendSms(form.getPhone(), "Вы зарегистрированы!");
                     redirectAttributes.addFlashAttribute("error", "follow to " +form.getEmail() + " to confirm your account"); //doesn't work
                     return "redirect:/signIn";
                 } else {

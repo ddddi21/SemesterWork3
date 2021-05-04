@@ -22,4 +22,6 @@ public class SignUpFormDto {
         private String username;
         @NotNull
          private String gender;
+
+        private String phone;
 }

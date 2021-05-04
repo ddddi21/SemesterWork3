@@ -78,23 +78,19 @@
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container -->
     </nav><!-- /.navbar -->
-    <h3><@spring.message 'user_page.title'></@spring.message> ${userEmail}</h3>
 
 </div><!-- /.container-fluid -->
-<#if imagepath?has_content>
-    <img src="${imagepath}" class="m-x-auto img-fluid img-circle" alt="avatar" height="300" width="300">
-<#else>
-    <img src="//placehold.it/150" class="m-x-auto img-fluid img-circle" alt="avatar" height="300" width="300">
-</#if>
 
 <#if message??>
     <h5> ${message} </h5>
 </#if>
-
+<#if error??>
+    <h5> ${error} </h5>
+</#if>
 <div>
     <form method="POST"  action="/createTask">
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-        <input name="task_text" type="text" placeholder="text">
+        <input name="text" type="text" placeholder="text" required>
         <#--            <input name="password" type="password" placeholder="<@spring.message 'input_form.password'></@spring.message>">-->
         <#--            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">-->
         <#--            <input type="checkbox" name = "rememberMe"> <@spring.message 'sign_in_page.rememberMe'></@spring.message><br>-->

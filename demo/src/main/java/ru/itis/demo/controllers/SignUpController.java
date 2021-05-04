@@ -32,6 +32,7 @@ public class SignUpController {
     @PostMapping("/signUp")
     public String signUp(UserForm form, Model model) {
         UserDto userDto;
+//        if(form.getPassword()|| form.) //add empty fields checking
         if ((userDto = signUpServiceInterface.signUp(form))!= null) {
             emailSenderServiceInterface.sendEmail(userDto);
             return "redirect:/signIn";

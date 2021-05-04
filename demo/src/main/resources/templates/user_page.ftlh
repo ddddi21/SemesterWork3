@@ -103,6 +103,7 @@
 
 <p>
     <a href="/editProfile"><@spring.message 'user_page.edit'></@spring.message></a>
+    <a href="/createTask"><@spring.message 'user_page.create_task'></@spring.message></a>
 </p>
 <#--    <button type="button" class="btn"><a href="/editUser">Редактировать</a></button>-->
 <#--    <div>-->

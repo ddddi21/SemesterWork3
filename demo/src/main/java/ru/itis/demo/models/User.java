@@ -59,4 +59,5 @@ public class User {
 //                .state(State.ACTIVE)
 //                .build();
 //    }
+    //связать таблицы юзера и таски
 }

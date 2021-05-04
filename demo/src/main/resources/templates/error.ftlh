@@ -1,11 +1,9 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Registration Success</title>
+    <title>Error</title>
 </head>
 <body>
-<center>
-    <span th:text="${message}"></span>
-</center>
+ой, чет не так
 </body>
 </html>

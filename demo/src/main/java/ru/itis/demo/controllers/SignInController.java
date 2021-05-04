@@ -6,6 +6,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import ru.itis.demo.dto.SignInFormDto;
 import ru.itis.demo.security.details.UserDetailsImpl;
 
 
@@ -21,9 +23,15 @@ public class SignInController {
 
     //не заходит сюда
     @PostMapping("/signIn")
-    public String postSignInPage(@AuthenticationPrincipal UserDetailsImpl user, Model model) {
-        if(user.getUsername().isEmpty() || user.getPassword().isEmpty()){
-            model.addAttribute("error", "empty fields");
+    public String postSignInPage(@AuthenticationPrincipal UserDetailsImpl userDetails, SignInFormDto user, Model model, RedirectAttributes redirectAttributes) {
+        if(user.getEmail().isEmpty() || user.getPassword().isEmpty()){
+//            model.addAttribute("error", "empty fields");
+            redirectAttributes.addFlashAttribute("error", "empty fields");
+            return "sign_in_page";
+        } else{
+            if (!userDetails.isEnabled()){
+                redirectAttributes.addFlashAttribute("error", "confirm your account at " +userDetails.getUsername());
+            }
         }
         return "sign_in_page";
     }

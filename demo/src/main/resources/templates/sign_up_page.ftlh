@@ -10,7 +10,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
-
 <!doctype html>
 <html lang="en" >
 <#import "spring.ftl" as spring/>
@@ -323,11 +322,6 @@
 </div><!-- /.container-fluid -->
 <#--<h2><a href="?lang=ru">RU</a> </h2>-->
 <#--<h2><a href="?lang=en">EN</a> </h2>-->
-<#if message??>
-<div class="etc-login-form">
-<p> ${message} </p>
-</div>
-</#if>
 
 <div class="text-center" style="padding:50px 0">
     <div class="logo"><@spring.message 'sign_up_page.title'></@spring.message></div>
@@ -339,33 +333,33 @@
             <div class="main-login-form">
                 <div class="login-group">
                     <div class="form-group">
-                        <label for="reg_username" class="sr-only">Email address</label>
-                        <input type="email" class="form-control" id="reg_username" name="email" placeholder="<@spring.message 'input_form.email'></@spring.message>">
+                        <label for="reg_email" class="sr-only">Email address</label>
+                        <input type="email" class="form-control" id="reg_email" name="email" placeholder="<@spring.message 'input_form.email'></@spring.message>">
                     </div>
                     <div class="form-group">
                         <label for="reg_password" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="reg_password" name="password" placeholder="<@spring.message 'input_form.password'></@spring.message>"">
+                        <input type="password" class="form-control" id="reg_password" name="password" placeholder="<@spring.message 'input_form.password'></@spring.message>">
                     </div>
                     <div class="form-group">
                         <label for="reg_password_confirm" class="sr-only">Password Confirm</label>
-                        <input type="password" class="form-control" id="reg_password_confirm" name="reg_password_confirm" placeholder="confirm password">
+                        <input type="password" class="form-control" id="reg_password_confirm" name="repeatPassword" placeholder="<@spring.message 'sign_up_page.password_confirm'/>">
                     </div>
 
-<#--                    <div class="form-group">-->
-<#--                        <label for="reg_email" class="sr-only">Email</label>-->
-<#--                        <input type="text" class="form-control" id="reg_email" name="reg_email" placeholder="email">-->
-<#--                    </div>-->
                     <div class="form-group">
-                        <label for="reg_fullname" class="sr-only">Full Name</label>
-                        <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">
+                        <label for="reg_useranem" class="sr-only">Username</label>
+                        <input type="text" class="form-control" id="reg_username" name="username" placeholder="<@spring.message 'sign_up_page.username'/>">
                     </div>
+<#--                    <div class="form-group">-->
+<#--                        <label for="reg_fullname" class="sr-only">Full Name</label>-->
+<#--                        <input type="text" class="form-control" id="reg_fullname" name="reg_fullname" placeholder="full name">-->
+<#--                    </div>-->
 
                     <div class="form-group login-group-checkbox">
-                        <input type="radio" class="" name="reg_gender" id="male" placeholder="username">
-                        <label for="male">male</label>
+                        <input type="radio" class="" name="gender" value="male" id="male" placeholder="username">
+                        <label for="male"><@spring.message 'sign_up_page.male'/></label>
 
-                        <input type="radio" class="" name="reg_gender" id="female" placeholder="username">
-                        <label for="female">female</label>
+                        <input type="radio" class="" name="gender" id="female" value="female" placeholder="username">
+                        <label for="female"><@spring.message 'sign_up_page.female'/></label>
                     </div>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 
@@ -378,6 +372,11 @@
             </div>
             <div class="etc-login-form">
                 <p><@spring.message 'sign_up_page.have_an_account'/><a href="/signIn"><@spring.message 'sign_up_page.to_login'/></a></p>
+            </div>
+            <div class="etc-login-form">
+            <#if error?has_content>
+                    <p> ${error} </p>
+            </#if>
             </div>
         </form>
         </form>

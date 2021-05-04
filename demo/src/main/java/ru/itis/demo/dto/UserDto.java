@@ -18,6 +18,8 @@ import java.util.stream.Collectors;
 public class UserDto {
     private Long id;
     private String email;
+    private String username;
+    private String gender;
     private String code;
 
     public static UserDto from(User user){
@@ -25,6 +27,8 @@ public class UserDto {
                 .id(user.getId())
                 .email(user.getEmail())
                 .code(user.getCurrentConfirmationCode())
+                .username(user.getUsername())
+                .gender(user.getGender())
                 .build();
     }
 

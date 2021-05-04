@@ -1,25 +1,14 @@
 package ru.itis.demo.services.implementations;
 
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.mail.javamail.MimeMessagePreparator;
 import org.springframework.stereotype.Service;
-import ru.itis.demo.dto.UserDto;
-import ru.itis.demo.dto.UserForm;
-import ru.itis.demo.models.User;
 import ru.itis.demo.services.interfaces.EmailSenderServiceInterface;
 
-import javax.mail.*;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-import java.io.File;
 import java.nio.charset.StandardCharsets;
-import java.util.Properties;
 import java.util.concurrent.ExecutorService;
 
 

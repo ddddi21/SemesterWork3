@@ -69,24 +69,24 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/home">Home
+                    <a class="nav-link" href="/home"><@spring.message 'navbar.home'/>
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#"><@spring.message 'navbar.about'/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/signIn">Log in</a>
+                    <a class="nav-link" href="/signIn"><@spring.message 'navbar.sign_in'/></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/signUp">Join us</a>
+                    <a class="nav-link" href="/signUp"><@spring.message 'navbar.sign_up'/></a>
                 </li>
                 <li>
-                    <a class="nav-link" href="?lang=ru">RU</a>
+                    <a class="nav-link" href="?lang=ru"><@spring.message 'navbar.ru'/></a>
                 </li>
                 <li>
-                    <a class="nav-link" href="?lang=en">EN</a>
+                    <a class="nav-link" href="?lang=en"><@spring.message 'navbar.en'/></a>
                 </li>
             </ul>
         </div>

@@ -6,7 +6,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
-public class UserForm {
+public class SignInFormDto {
     //TODO(fix messages doesn't work)
     @NotNull(message = "{errors.incorrect.email}")
     @Email(message = "{errors.incorrect.email}")
@@ -14,7 +14,6 @@ public class UserForm {
 
     @NotNull(message = "{errors.null.password}")
     private String password;
-
 //    @NotNull(message = "{errors.null.age}")
 //    @Min(message ="{errors.incorrect.age}", value = 0)
 //        private Integer age;

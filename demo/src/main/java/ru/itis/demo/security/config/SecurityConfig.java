@@ -33,7 +33,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //        http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/signUp").permitAll()
+                .antMatchers("/signIn").permitAll()
                 .antMatchers("/profile").authenticated()
+                .antMatchers("/editProfile").authenticated()
                 .antMatchers("/users").hasAuthority("ADMIN")
                 .antMatchers("/banAll").hasAuthority("ADMIN")
                 .and()
@@ -44,6 +46,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .failureUrl("/signIn?error")
                 .and()
                 .logout()
+                .logoutSuccessUrl("/home")
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout", "GET"))
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")

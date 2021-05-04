@@ -3,7 +3,7 @@ package ru.itis.demo.services.implementations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-import ru.itis.demo.dto.UserForm;
+import ru.itis.demo.dto.SignInFormDto;
 import ru.itis.demo.models.User;
 import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.services.interfaces.SignInServiceInterface;
@@ -15,7 +15,7 @@ public class SignInServiceInterfaceImpl implements SignInServiceInterface {
 
     //not using
     @Override
-    public Boolean signIn(UserForm form) {
+    public Boolean signIn(SignInFormDto form) {
         if(form.getEmail().isEmpty() || form.getPassword().isEmpty()){
             //delete when messages will be fixed
             return false;
@@ -29,7 +29,7 @@ public class SignInServiceInterfaceImpl implements SignInServiceInterface {
 
     //not using
     @Override
-    public Boolean checkPassword(UserForm user) {
+    public Boolean checkPassword(SignInFormDto user) {
         if(isAlreadyExist(user)){
             User new_user = usersRepositoryInterface.findByEmail(user.getEmail()).orElseThrow(()-> new UsernameNotFoundException("User not found"));
             if (
@@ -40,7 +40,7 @@ public class SignInServiceInterfaceImpl implements SignInServiceInterface {
     }
 
     @Override
-    public Boolean isAlreadyExist(UserForm user) {
+    public Boolean isAlreadyExist(SignInFormDto user) {
         if(usersRepositoryInterface.existsByEmail(user.getEmail())) {
             return true;
         } else return false;

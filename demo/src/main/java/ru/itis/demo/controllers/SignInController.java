@@ -22,6 +22,7 @@ public class SignInController {
     }
 
     //не заходит сюда
+    //ask
     @PostMapping("/signIn")
     public String postSignInPage(@AuthenticationPrincipal UserDetailsImpl userDetails, SignInFormDto user, Model model, RedirectAttributes redirectAttributes) {
         if(user.getEmail().isEmpty() || user.getPassword().isEmpty()){

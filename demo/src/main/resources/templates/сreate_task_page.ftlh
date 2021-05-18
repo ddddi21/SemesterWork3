@@ -21,6 +21,88 @@
     <title>Document</title>
 </head>
 <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .form {
+        width: 300px;
+        padding: 32px;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px #ccc;
+        font-family: sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .form__input,
+    .form__button {
+        font-family: sans-serif;
+        letter-spacing: 1px;
+        font-size: 16px;
+    }
+
+    .form__title {
+        text-align: center;
+        margin: 0 0 32px 0;
+        font-weight: normal;
+    }
+
+    .form__group {
+        position: relative;
+        margin-bottom: 32px;
+    }
+    .form__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        color: #9e9e9e;
+        transition: 0.3s;
+    }
+
+    .form__input {
+        width: 100%;
+        padding: 0 0 10px 0;
+        border: none;
+        border-bottom: 1px solid #e0e0e0;
+        background-color: transparent;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .form__input:focus {
+        border-bottom: 1px solid #1a73a8;
+    }
+
+    .from__button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #0071f0;
+        outline: none;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .form__button:focus,
+    .form__button:hover {
+        background-color: rgba(0, 113, 240, 0.7);
+    }
+
+    .form__input:focus ~ .form__label,
+    .form__input:not(:placeholder-shown) ~ .form__label {
+        top: -18px;
+        font-size: 12px;
+        color: #e0e0e0;
+    }
+
+
+
+
 
     .navbar-brand { position: relative; z-index: 2; }
 
@@ -91,14 +173,39 @@
     <h5> ${message} </h5>
 </#if>
 
-<div>
-    <form method="POST"  action="/createTask">
+<#--<div>-->
+<#--    <form method="POST"  action="/createTask">-->
+<#--        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">-->
+<#--            <input name="task_text" type="text" placeholder="text">-->
+<#--&lt;#&ndash;            <input name="password" type="password" placeholder="<@spring.message 'input_form.password'></@spring.message>">&ndash;&gt;-->
+<#--&lt;#&ndash;            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">&ndash;&gt;-->
+<#--&lt;#&ndash;            <input type="checkbox" name = "rememberMe"> <@spring.message 'sign_in_page.rememberMe'></@spring.message><br>&ndash;&gt;-->
+<#--            <input type="submit" value="<@spring.message 'input_form.enter'></@spring.message>">-->
+<#--    </form>-->
+<#--</div>-->
+<div class="form_base">
+    <form class="form" action="/createTask" method="POST">
+        <h4 class="from__title"> Task creating</h4> <br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description:</label>
+            <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Deadline:</label>
+            <input name="deadline" type="date" class="form-control" aria-label="Default"
+                   aria-describedby="inputGroup-sizing-default">  </div><br>
         <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-            <input name="task_text" type="text" placeholder="text">
-<#--            <input name="password" type="password" placeholder="<@spring.message 'input_form.password'></@spring.message>">-->
-<#--            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">-->
-<#--            <input type="checkbox" name = "rememberMe"> <@spring.message 'sign_in_page.rememberMe'></@spring.message><br>-->
-            <input type="submit" value="<@spring.message 'input_form.enter'></@spring.message>">
+        <#--        <div class="form-group">-->
+        <#--            <label for="exampleFormControlTextarea1">Группа:</label>-->
+        <#--            <input name="group" type="number" class="form-control" aria-label="Default"-->
+        <#--                   aria-describedby="inputGroup-sizing-default">    </div><br>-->
+        <button type="submit" class="from__button">Create</button>
+        <p>
+<#--            <a href="http://localhost:8080/profile">-->
+<#--                <button type="button" class="from__button">Назад</button>-->
+<#--            </a>-->
+        </p>
     </form>
 </div>
 

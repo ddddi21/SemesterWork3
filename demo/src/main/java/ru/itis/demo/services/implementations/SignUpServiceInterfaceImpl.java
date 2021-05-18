@@ -36,6 +36,7 @@ public class SignUpServiceInterfaceImpl implements SignUpServiceInterface {
                     .currentConfirmationCode((uuid))
                     .gender(form.getGender())
                     .username(form.getUsername())
+                    .phone(form.getPhone())
                     .build();
             if(!usersRepositoryInterface.existsByEmail(newUser.getEmail())) {
                 usersRepositoryInterface.save(newUser);

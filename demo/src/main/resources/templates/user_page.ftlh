@@ -71,6 +71,8 @@
 <#--                <li><a href="/home"><@spring.message 'navbar.home'/></a></li>-->
                 <li><a href="#"><@spring.message 'navbar.about'/></a></li>
                 <li><a href="/profile"><@spring.message 'navbar.profile'/></a></li>
+                <li><a href="/tasks"><@spring.message 'navbar.tasks'/></a></li>
+                <li><a href="/createTask"><@spring.message 'navbar.create_task'/></a></li>
                 <li><a href="?lang=ru"><@spring.message 'navbar.ru'/></a></li>
                 <li><a href="?lang=en"><@spring.message 'navbar.en'/></a></li>
                 <li><a href="/logout"><@spring.message 'navbar.logout'/></a></li>
@@ -104,6 +106,8 @@
 <p>
     <a href="/editProfile"><@spring.message 'user_page.edit'></@spring.message></a>
     <a href="/createTask"><@spring.message 'user_page.create_task'></@spring.message></a>
+    <a href="/tasks"><@spring.message 'user_page.all_tasks'></@spring.message></a>
+
 </p>
 <#--    <button type="button" class="btn"><a href="/editUser">Редактировать</a></button>-->
 <#--    <div>-->

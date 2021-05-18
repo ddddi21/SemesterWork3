@@ -1,6 +1,7 @@
 package ru.itis.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,10 +17,13 @@ public class CreateTaskController {
     @Autowired
     private CreateTaskServiceImpl createTaskService;
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/createTask")
     public String getCreateTaskPage(){
         return "create_task";
     }
+
+    @PreAuthorize("isAuthenticated()")
     @PostMapping("/createTask")
     public String createTask(TaskDto form, @AuthenticationPrincipal UserDetailsImpl user, RedirectAttributes attributes){
         if(form.getText().isEmpty()){

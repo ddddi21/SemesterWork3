@@ -11,4 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TaskDto {
     private String text;
+    private String title;
+    private String deadline;
 }

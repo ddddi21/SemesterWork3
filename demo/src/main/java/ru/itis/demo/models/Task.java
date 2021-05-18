@@ -18,7 +18,9 @@ public class Task {
     @Id
     private Long id;
     private String text;
+    private String title;
     private Long ownerId;
+    private String deadline;
 
 
 

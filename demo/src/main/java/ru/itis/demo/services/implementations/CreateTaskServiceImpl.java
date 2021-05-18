@@ -22,8 +22,14 @@ public class CreateTaskServiceImpl implements CreateTaskService {
     @Override
     public Task addTask(TaskDto taskDto, UserDetailsImpl userDetails) {
         User user = usersRepositoryInterface.findByEmail(userDetails.getUsername()).get();
+        String desc = taskDto.getText();
+        if(taskDto.getText() == null) {
+            desc = "-";
+        }
         Task task = Task.builder()
-        .text(taskDto.getText())
+        .text(desc)
+                .title(taskDto.getTitle())
+                .deadline(taskDto.getDeadline())
         .ownerId(user.getId())
         .build();
         tasksRepository.save(task);

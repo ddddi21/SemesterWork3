@@ -47,7 +47,7 @@ public class AllTasksController {
     public String deleteTask(
             @AuthenticationPrincipal UserDetailsImpl currentUser,
             @PathVariable Long user,
-            @RequestParam("task") Task task,
+            @RequestParam(required = false) Task task,
             RedirectAttributes attributes
     ) {
         allTasks.deleteTask(currentUser,task);
@@ -74,6 +74,7 @@ public class AllTasksController {
         return "redirect:/tasks";
     }
 
+    @PreAuthorize("isAuthenticated()")
     @GetMapping("/tasks")
     public String getCreateTaskPage(@RequestParam(required = false, defaultValue = "") String filter,
                                       Model model,

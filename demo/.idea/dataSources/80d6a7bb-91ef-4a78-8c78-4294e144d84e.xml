@@ -7,9 +7,11 @@
     <database id="2" parent="1" name="db_sem_2">
       <ObjectId>41039</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <IntrospectionStateNumber>882</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1131</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|41055|41057|1
+      <Relations>sequence|table|41065|41067|1
+sequence|table|41055|41057|1
+sequence|table|49260|49262|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -114,7 +116,7 @@
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>883</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1132</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="22" parent="2" name="heap">
@@ -188,17 +190,43 @@
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
-    <table id="31" parent="21" name="account">
+    <sequence id="31" parent="21" name="room_id_seq">
+      <ObjectId>49260</ObjectId>
+      <StateNumber>1126</StateNumber>
+      <Owner>user_for_sem1</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="32" parent="21" name="task_id_seq">
+      <ObjectId>41065</ObjectId>
+      <StateNumber>1060</StateNumber>
+      <Owner>user_for_sem1</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="33" parent="21" name="account">
       <ObjectId>41057</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <StateNumber>880</StateNumber>
+      <StateNumber>1057</StateNumber>
     </table>
-    <table id="32" parent="21" name="persistent_logins">
+    <table id="34" parent="21" name="persistent_logins">
       <ObjectId>41050</ObjectId>
       <Owner>user_for_sem1</Owner>
       <StateNumber>876</StateNumber>
     </table>
-    <column id="33" parent="31" name="id">
+    <table id="35" parent="21" name="room">
+      <ObjectId>49262</ObjectId>
+      <Owner>user_for_sem1</Owner>
+      <StateNumber>1126</StateNumber>
+    </table>
+    <table id="36" parent="21" name="task">
+      <ObjectId>41067</ObjectId>
+      <Owner>user_for_sem1</Owner>
+      <StateNumber>1076</StateNumber>
+    </table>
+    <column id="37" parent="33" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -206,85 +234,219 @@
       <TypeId>20</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="34" parent="31" name="email">
+    <column id="38" parent="33" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="35" parent="31" name="password">
+    <column id="39" parent="33" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="36" parent="31" name="role">
+    <column id="40" parent="33" name="role">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="37" parent="31" name="state">
+    <column id="41" parent="33" name="state">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>880</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="38" parent="31" name="account_pkey">
+    <column id="42" parent="33" name="imagepath">
+      <Position>6</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>920</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="43" parent="33" name="current_confirmation_code">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>963</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="44" parent="33" name="type">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1046</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="45" parent="33" name="username">
+      <Position>9</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1047</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="33" name="gender">
+      <Position>10</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1048</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="33" name="phone">
+      <Position>11</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1057</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="48" parent="33" name="account_pkey">
       <ObjectId>41063</ObjectId>
       <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="39" parent="31" name="account_pkey">
+    <key id="49" parent="33" name="account_pkey">
       <ObjectId>41064</ObjectId>
       <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>account_pkey</UnderlyingIndexName>
     </key>
-    <column id="40" parent="32" name="username">
+    <column id="50" parent="34" name="username">
       <Position>1</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="41" parent="32" name="series">
+    <column id="51" parent="34" name="series">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="42" parent="32" name="token">
+    <column id="52" parent="34" name="token">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="43" parent="32" name="last_used">
+    <column id="53" parent="34" name="last_used">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="44" parent="32" name="persistent_logins_pkey">
+    <index id="54" parent="34" name="persistent_logins_pkey">
       <ObjectId>41053</ObjectId>
       <StateNumber>876</StateNumber>
       <ColNames>series</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="45" parent="32" name="persistent_logins_pkey">
+    <key id="55" parent="34" name="persistent_logins_pkey">
       <ObjectId>41054</ObjectId>
       <StateNumber>876</StateNumber>
       <ColNames>series</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>persistent_logins_pkey</UnderlyingIndexName>
+    </key>
+    <column id="56" parent="35" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1126</StateNumber>
+      <TypeId>20</TypeId>
+      <IdentityKind>by-default</IdentityKind>
+    </column>
+    <column id="57" parent="35" name="link">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1126</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="58" parent="35" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1126</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="59" parent="35" name="owner_id">
+      <Position>4</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1126</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <index id="60" parent="35" name="room_pkey">
+      <ObjectId>49268</ObjectId>
+      <StateNumber>1126</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="61" parent="35" name="uk_62besqao9xhqog2vkbwjjp28p">
+      <ObjectId>49270</ObjectId>
+      <StateNumber>1128</StateNumber>
+      <ColNames>link</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="35" name="room_pkey">
+      <ObjectId>49269</ObjectId>
+      <StateNumber>1126</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>room_pkey</UnderlyingIndexName>
+    </key>
+    <key id="63" parent="35" name="uk_62besqao9xhqog2vkbwjjp28p">
+      <ObjectId>49271</ObjectId>
+      <StateNumber>1128</StateNumber>
+      <ColNames>link</ColNames>
+      <UnderlyingIndexName>uk_62besqao9xhqog2vkbwjjp28p</UnderlyingIndexName>
+    </key>
+    <column id="64" parent="36" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1060</StateNumber>
+      <TypeId>20</TypeId>
+      <IdentityKind>by-default</IdentityKind>
+    </column>
+    <column id="65" parent="36" name="owner_id">
+      <Position>2</Position>
+      <DataType>bigint|0s</DataType>
+      <StateNumber>1060</StateNumber>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="66" parent="36" name="text">
+      <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1060</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="36" name="deadline">
+      <Position>4</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1075</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="68" parent="36" name="title">
+      <Position>5</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1076</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="69" parent="36" name="task_pkey">
+      <ObjectId>41070</ObjectId>
+      <StateNumber>1060</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="70" parent="36" name="task_pkey">
+      <ObjectId>41071</ObjectId>
+      <StateNumber>1060</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>task_pkey</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

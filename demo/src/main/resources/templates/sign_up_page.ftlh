@@ -319,9 +319,19 @@
         </div><!-- /.container -->
     </nav><!-- /.navbar -->
 
-</div><!-- /.container-fluid -->
-<#--<h2><a href="?lang=ru">RU</a> </h2>-->
-<#--<h2><a href="?lang=en">EN</a> </h2>-->
+</div>
+
+<#if error?has_content>
+    <div class="etc-login-form">
+        <p>Error: ${error}</p>
+    </div>
+<#else>
+</#if>
+<#if message?has_content>
+    <div class="etc-login-form">
+        <p> ${message} </p>
+    </div>
+</#if>
 
 <div class="text-center" style="padding:50px 0">
     <div class="logo"><@spring.message 'sign_up_page.title'></@spring.message></div>

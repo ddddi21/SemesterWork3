@@ -41,16 +41,20 @@ public class SignUpController {
                 redirectAttributes.addFlashAttribute("error", "passwords not same");
                 return "redirect:/signUp";
             } else {
-//        if(form.getPassword()|| form.) //add empty fields checking
-                if ((userDto = signUpServiceInterface.signUp(form)) != null) {
-                    emailSenderServiceInterface.sendEmail(userDto);
-                    smsService.sendSms(form.getPhone(), "Вы зарегистрированы!");
-                    redirectAttributes.addFlashAttribute("error", "follow to " +form.getEmail() + " to confirm your account"); //doesn't work
-                    return "redirect:/signIn";
-                } else {
-                    redirectAttributes.addFlashAttribute("error", "this email already exist");
-//            model.addAttribute("error", "this email already exist"); this shit doesn't work again
+                if (form.getPassword().length() < 4) {
+                    redirectAttributes.addFlashAttribute("error", "passwords should be more than 4 characters");
                     return "redirect:/signUp";
+                } else {
+                    if ((userDto = signUpServiceInterface.signUp(form)) != null) {
+                        emailSenderServiceInterface.sendEmail(userDto);
+                        smsService.sendSms(form.getPhone(), "Вы зарегистрированы!");
+                        redirectAttributes.addFlashAttribute("error", "follow to " + form.getEmail() + " to confirm your account"); //doesn't work
+                        return "redirect:/signIn";
+                    } else {
+                        redirectAttributes.addFlashAttribute("error", "this email already exist");
+//            model.addAttribute("error", "this email already exist"); this shit doesn't work again
+                        return "redirect:/signUp";
+                    }
                 }
             }
         }

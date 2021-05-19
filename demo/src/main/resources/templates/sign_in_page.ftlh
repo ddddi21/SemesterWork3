@@ -351,17 +351,17 @@
 </div><!-- /.container-fluid -->
 
 <div class="text-center" style="padding:50px 0">
-<#--    <#if error?has_content>-->
-<#--        <div class="etc-login-form">-->
-<#--            <p>Error: ${error}</p>-->
-<#--        </div>-->
-<#--    <#else>-->
-<#--    </#if>-->
-<#--    <#if message?has_content>-->
-<#--        <div class="etc-login-form">-->
-<#--            <p> ${message} </p>-->
-<#--        </div>-->
-<#--    </#if>-->
+    <#if error?has_content>
+        <div class="etc-login-form">
+            <p>Error: ${error}</p>
+        </div>
+    <#else>
+    </#if>
+    <#if message?has_content>
+        <div class="etc-login-form">
+            <p> ${message} </p>
+        </div>
+    </#if>
 <#--    <#if info?has_content>-->
 <#--        <div class="reg-container">-->
 <#--            <p>${info}</p>-->

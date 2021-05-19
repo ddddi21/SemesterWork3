@@ -6,11 +6,11 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import ru.itis.demo.models.Task;
 
-import java.util.List;
+import java.util.Optional;
 
 @Repository("taskRepository")
 public interface TasksRepository extends JpaRepository<Task,Long> {
     Page<Task> findAllByOwnerId(Long id, Pageable pageable);
     Page<Task> findAllByOwnerIdAndTitle(Long id, String name, Pageable pageable);
-
+    Optional<Task> findById(Long id);
 }

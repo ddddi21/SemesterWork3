@@ -200,6 +200,9 @@
         </form>
     </div>
 </div>
+<#if error??>
+    <h5> ${error} </h5>
+</#if>
 <div class="card-columns" id="message-list">
     <#list page.content as message>
         <div class="card my-3" data-id="${message.id}">
@@ -211,9 +214,13 @@
                 <a>Due to:${message.deadline}</a>
 <#--                <a href="/user-messages/${message.author.id}">${message.authorName}</a>-->
 <#--                <#if message.author.id == currentUserId>-->
-<#--                    <a class="btn btn-primary" href="/user-messages/${message.author.id}?message=${message.id}">-->
-<#--                        Edit-->
-<#--                    </a>-->
+                <br>
+                    <a class="btn btn-primary" href="/tasks/${message.ownerId}?task=${message.id}">
+                        Edit
+                    </a>
+                    <a class="btn btn-primary" href="/tasks/${message.ownerId}/delete?task=${message.id}">
+                        Delete
+                    </a>
 <#--                </#if>-->
             </div>
         </div>

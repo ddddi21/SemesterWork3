@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
+//taskController
 @Controller
 public class AllTasksController {
 
@@ -74,6 +75,7 @@ public class AllTasksController {
         return "redirect:/tasks";
     }
 
+    //namings
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/tasks")
     public String getCreateTaskPage(@RequestParam(required = false, defaultValue = "") String filter,

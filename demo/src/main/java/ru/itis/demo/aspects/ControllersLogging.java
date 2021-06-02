@@ -26,6 +26,7 @@ public class ControllersLogging {
                 +"\n 3)target:" + joinPoint.getTarget());
     }
 
+    //Object, method naming
     @AfterReturning(pointcut = "selectAllMethodsAvaliable()", returning = "someValue")
     public void afterReturningAdvice(Object someValue) {
         System.out.println("Value controllers: " + someValue.toString());

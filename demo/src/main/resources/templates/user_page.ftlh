@@ -105,10 +105,19 @@
 
 <p>
     <a href="/editProfile"><@spring.message 'user_page.edit'></@spring.message></a>
-    <a href="/createTask"><@spring.message 'user_page.create_task'></@spring.message></a>
-    <a href="/tasks"><@spring.message 'user_page.all_tasks'></@spring.message></a>
+<#--    <a href="/createTask"><@spring.message 'user_page.create_task'></@spring.message></a>-->
+<#--    <a href="/tasks"><@spring.message 'user_page.all_tasks'></@spring.message></a>-->
 
 </p>
+<br><br><br>
+<#--<div>-->
+<#--    <form method="post" action="/room/${message.id}" class="form-inline">-->
+<#--        <label>-->
+<#--            <input type="text" class="form-control" value="${code!}" placeholder="Search by tag" />-->
+<#--        </label>-->
+<#--        <button type="submit" class="btn btn-primary ml-2">Search</button>-->
+<#--    </form>-->
+<#--</div>-->
 <#--    <button type="button" class="btn"><a href="/editUser">Редактировать</a></button>-->
 <#--    <div>-->
 <#--        <h4>Your files:</h4>-->

@@ -55,4 +55,10 @@ public class UserDetailsImpl implements UserDetails {
     public String getImagePath(){
         return user.getImagepath();
     }
+
+    public Long getUserId(){
+        return user.getId();
+    }
+
+    public String getUserPhone() { return user.getPhone(); }
 }

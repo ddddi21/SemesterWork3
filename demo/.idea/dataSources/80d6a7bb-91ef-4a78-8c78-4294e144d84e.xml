@@ -7,7 +7,7 @@
     <database id="2" parent="1" name="db_sem_2">
       <ObjectId>41039</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <IntrospectionStateNumber>1131</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1269</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|41065|41067|1
 sequence|table|41055|41057|1
@@ -116,7 +116,7 @@ sequence|table|49260|49262|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1132</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1270</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="22" parent="2" name="heap">
@@ -200,9 +200,9 @@ sequence|table|49260|49262|1
     </sequence>
     <sequence id="32" parent="21" name="task_id_seq">
       <ObjectId>41065</ObjectId>
-      <StateNumber>1060</StateNumber>
+      <StateNumber>1267</StateNumber>
       <Owner>user_for_sem1</Owner>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
@@ -224,7 +224,7 @@ sequence|table|49260|49262|1
     <table id="36" parent="21" name="task">
       <ObjectId>41067</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <StateNumber>1076</StateNumber>
+      <StateNumber>1240</StateNumber>
     </table>
     <column id="37" parent="33" name="id">
       <Position>1</Position>
@@ -434,14 +434,26 @@ sequence|table|49260|49262|1
       <StateNumber>1076</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="69" parent="36" name="task_pkey">
+    <column id="69" parent="36" name="is_available">
+      <Position>6</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>1210</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="70" parent="36" name="is_sms_about_invalid_send">
+      <Position>8</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>1240</StateNumber>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="71" parent="36" name="task_pkey">
       <ObjectId>41070</ObjectId>
       <StateNumber>1060</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="70" parent="36" name="task_pkey">
+    <key id="72" parent="36" name="task_pkey">
       <ObjectId>41071</ObjectId>
       <StateNumber>1060</StateNumber>
       <ColNames>id</ColNames>

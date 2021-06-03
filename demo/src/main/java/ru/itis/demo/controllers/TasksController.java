@@ -10,34 +10,37 @@ import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.itis.demo.dto.TaskDto;
-import ru.itis.demo.dto.TasksPageDto;
+import ru.itis.demo.dto.TaskForSmsDto;
+import ru.itis.demo.helpers.ScheduledTasks;
 import ru.itis.demo.models.Task;
 import ru.itis.demo.models.User;
-import ru.itis.demo.repositories.TasksRepository;
-import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.security.details.UserDetailsImpl;
-import ru.itis.demo.services.implementations.AllTasksInterfaceImpl;
+import ru.itis.demo.services.implementations.SmsServiceImpl;
+import ru.itis.demo.services.implementations.TasksInterfaceImpl;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 //taskController
 @Controller
-public class AllTasksController {
+public class TasksController {
 
     @Autowired
-    private AllTasksInterfaceImpl allTasks;
+    private TasksInterfaceImpl allTasks;
+
+    @Autowired
+    private ScheduledTasks scheduledTasks;
+
+    @Autowired
+    private SmsServiceImpl smsService;
 
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/tasks/{user}")
-    public String createTaskPage(  @PathVariable User user,
-                                   Model model,
-                                   @RequestParam(required = false) Task task) {
+    public String editTask(@PathVariable User user,
+                           Model model,
+                           @RequestParam(required = false) Task task) {
         model.addAttribute("message", task);
         return "edit_task";
     }
@@ -90,10 +93,27 @@ public class AllTasksController {
         } else {
             page = allTasks.findAllTask(userDetails,pageable);
         }
-
+        List<Task> invalidTasks = scheduledTasks.invalidTasks;
+        List<Task> myInvalidTasks = new ArrayList<>();
+        List <TaskForSmsDto>taskForSms = new ArrayList<>();
+        for(Task task: invalidTasks){
+            if(task.getOwnerId().equals(userDetails.getUserId())){
+                myInvalidTasks.add(task);
+                System.out.println("task.setIsSmsAboutInvalidSend before:" + task.getIsSmsAboutInvalidSend());
+               if(task.getIsSmsAboutInvalidSend() == null || !task.getIsSmsAboutInvalidSend()){
+                   taskForSms.add(TaskForSmsDto.from(task));
+                   task.setIsSmsAboutInvalidSend(true);
+                   System.out.println("task.setIsSmsAboutInvalidSend after:" + task.getIsSmsAboutInvalidSend());
+               }
+            }
+        }
+        System.out.println("taskForSms:" + taskForSms.toString());
+        if(!taskForSms.isEmpty()) {
+            smsService.sendSms(userDetails.getUserPhone(), "These tasks have expired:\n" + taskForSms.toString());
+        }
         model.addAttribute("page", page);
         model.addAttribute("url", "/tasks");
         model.addAttribute("filter", filter);
-        return "all_tasks";
+        return "tasks";
     }
 }

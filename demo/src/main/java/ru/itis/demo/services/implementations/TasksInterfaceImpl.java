@@ -4,23 +4,27 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import ru.itis.demo.dto.TaskDto;
-import ru.itis.demo.dto.TasksPageDto;
 import ru.itis.demo.models.Task;
 import ru.itis.demo.models.User;
 import ru.itis.demo.repositories.TasksRepository;
 import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.security.details.UserDetailsImpl;
-import ru.itis.demo.services.interfaces.AllTasksInterface;
+import ru.itis.demo.services.interfaces.TasksInterface;
 
-import java.util.List;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 @Service
 @RequiredArgsConstructor
-public class AllTasksInterfaceImpl implements AllTasksInterface {
+public class TasksInterfaceImpl implements TasksInterface {
     @Autowired
     private TasksRepository tasksRepository;
+
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+
 
     @Autowired
     private UsersRepositoryInterface usersRepositoryInterface;
@@ -54,5 +58,11 @@ public class AllTasksInterfaceImpl implements AllTasksInterface {
     public void deleteTask(UserDetailsImpl userDetails, Task task) {
         Task taskDelete = tasksRepository.findById(task.getId()).get();
         tasksRepository.delete(taskDelete);
+    }
+
+    @Scheduled(fixedRate = 5000)
+    public void checkAvailableDeadline() {
+        String currentDate = dateFormat.format(new Date());
+
     }
 }

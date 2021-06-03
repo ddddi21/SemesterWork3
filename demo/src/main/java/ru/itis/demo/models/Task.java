@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 
@@ -21,7 +22,9 @@ public class Task {
     private String title;
     private Long ownerId;
     private String deadline;
-
+    @Value("true") // doesn't work
+    private Boolean isAvailable;
+    private Boolean isSmsAboutInvalidSend;
 
 
 }

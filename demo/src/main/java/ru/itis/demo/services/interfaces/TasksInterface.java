@@ -11,7 +11,7 @@ import ru.itis.demo.security.details.UserDetailsImpl;
 import java.util.List;
 
 
-public interface AllTasksInterface {
+public interface TasksInterface {
         Page<Task> findAllTask(@AuthenticationPrincipal UserDetailsImpl user, Pageable pageable);
         Page<Task> findAllByOwnerIdAndTitle(@AuthenticationPrincipal UserDetailsImpl user, String name, Pageable pageable);
         TaskDto editTask(@AuthenticationPrincipal UserDetailsImpl userDetails, TaskDto taskDto);

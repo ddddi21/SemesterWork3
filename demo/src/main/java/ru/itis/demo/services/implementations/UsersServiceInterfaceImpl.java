@@ -6,11 +6,13 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 import ru.itis.demo.dto.EditProfileDto;
 import ru.itis.demo.dto.UserDto;
+import ru.itis.demo.mapper.UserMapper;
 import ru.itis.demo.models.User;
 import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.security.details.UserDetailsImpl;
 import ru.itis.demo.services.interfaces.UsersServiceInterface;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -24,7 +26,11 @@ public class UsersServiceInterfaceImpl implements UsersServiceInterface {
     @Override
     public List<UserDto> getAllUsers() {
         List<User> users = usersRepositoryInterface.findAll();
-        return UserDto.form(users);
+        List<UserDto> userDtoList = new ArrayList<>();
+        for(User user:users){
+            userDtoList.add(UserMapper.INSTANCE.userToUserDTO(user));
+        }
+        return userDtoList;
     }
 
     @Override

@@ -27,7 +27,7 @@ import java.util.List;
 public class TasksController {
 
     @Autowired
-    private TasksInterfaceImpl allTasks;
+    private TasksInterfaceImpl tasksService;
 
     @Autowired
     private ScheduledTasks scheduledTasks;
@@ -53,7 +53,7 @@ public class TasksController {
             @RequestParam(required = false) Task task,
             RedirectAttributes attributes
     ) {
-        allTasks.deleteTask(currentUser,task);
+        tasksService.deleteTask(currentUser,task);
         attributes.addFlashAttribute("error", "success delete!");
         return "redirect:/tasks";
     }
@@ -72,7 +72,7 @@ public class TasksController {
         task.setDeadline(deadline);
         task.setText(text);
         task.setTitle(title);
-        allTasks.editTask(currentUser, TaskDto.from(task));
+        tasksService.editTask(currentUser, TaskDto.from(task));
         attributes.addFlashAttribute("error", "success edit!");
         return "redirect:/tasks";
     }
@@ -87,9 +87,9 @@ public class TasksController {
         Page<Task> page;
 
         if (filter != null && !filter.isEmpty()) {
-            page = allTasks.findAllByOwnerIdAndTitle(userDetails,filter, pageable);
+            page = tasksService.findAllByOwnerIdAndTitle(userDetails,filter, pageable);
         } else {
-            page = allTasks.findAllTask(userDetails,pageable);
+            page = tasksService.findAllTask(userDetails,pageable);
         }
         List<Task> invalidTasks = scheduledTasks.invalidTasks;
         List<Task> myInvalidTasks = new ArrayList<>();
@@ -101,6 +101,7 @@ public class TasksController {
                if(task.getIsSmsAboutInvalidSend() == null || !task.getIsSmsAboutInvalidSend()){
                    taskForSms.add(TaskForSmsDto.from(task));
                    task.setIsSmsAboutInvalidSend(true);
+                   tasksService.save(task);
                    System.out.println("task.setIsSmsAboutInvalidSend after:" + task.getIsSmsAboutInvalidSend());
                }
             }

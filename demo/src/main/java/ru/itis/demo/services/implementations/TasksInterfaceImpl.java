@@ -60,6 +60,11 @@ public class TasksInterfaceImpl implements TasksInterface {
         tasksRepository.delete(taskDelete);
     }
 
+    @Override
+    public Task save(Task task) {
+       return tasksRepository.save(task);
+    }
+
     @Scheduled(fixedRate = 5000)
     public void checkAvailableDeadline() {
         String currentDate = dateFormat.format(new Date());

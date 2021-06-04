@@ -16,4 +16,5 @@ public interface TasksInterface {
         Page<Task> findAllByOwnerIdAndTitle(@AuthenticationPrincipal UserDetailsImpl user, String name, Pageable pageable);
         TaskDto editTask(@AuthenticationPrincipal UserDetailsImpl userDetails, TaskDto taskDto);
         void deleteTask(@AuthenticationPrincipal UserDetailsImpl userDetails, Task task);
+        Task save(Task task);
 }

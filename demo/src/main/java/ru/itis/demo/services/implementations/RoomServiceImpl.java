@@ -29,6 +29,7 @@ public class RoomServiceImpl implements RoomService {
         if (room != null){
             User user = usersRepositoryInterface.findByEmail(userDetails.getUsername()).get();
             user.setRoomId(roomDto.getRoomId());
+            usersRepositoryInterface.save(user);
             return room;
         } else return null;
     }

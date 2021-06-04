@@ -1,6 +1,5 @@
 package ru.itis.demo.controllers;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,8 +20,7 @@ public class SignInController {
         return "sign_in_page";
     }
 
-    //не заходит сюда
-    //ask
+
     @PostMapping("/signIn")
     public String postSignInPage(@AuthenticationPrincipal UserDetailsImpl userDetails, SignInFormDto user, Model model, RedirectAttributes redirectAttributes) {
         if(user.getEmail().isEmpty() || user.getPassword().isEmpty()){

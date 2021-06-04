@@ -14,7 +14,6 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import ru.itis.demo.dto.TaskDto;
 import ru.itis.demo.dto.TaskForSmsDto;
 import ru.itis.demo.helpers.ScheduledTasks;
-import ru.itis.demo.mapper.TaskMapper;
 import ru.itis.demo.models.Task;
 import ru.itis.demo.models.User;
 import ru.itis.demo.security.details.UserDetailsImpl;
@@ -24,7 +23,6 @@ import ru.itis.demo.services.implementations.TasksInterfaceImpl;
 import java.util.ArrayList;
 import java.util.List;
 
-//taskController
 @Controller
 public class TasksController {
 
@@ -79,7 +77,6 @@ public class TasksController {
         return "redirect:/tasks";
     }
 
-    //namings
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/tasks")
     public String getCreateTaskPage(@RequestParam(required = false, defaultValue = "") String filter,

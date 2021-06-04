@@ -7,7 +7,7 @@
     <database id="2" parent="1" name="db_sem_2">
       <ObjectId>41039</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <IntrospectionStateNumber>1269</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1329</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|41065|41067|1
 sequence|table|41055|41057|1
@@ -116,7 +116,7 @@ sequence|table|49260|49262|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>1270</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1330</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="22" parent="2" name="heap">
@@ -192,9 +192,9 @@ sequence|table|49260|49262|1
     </sequence>
     <sequence id="31" parent="21" name="room_id_seq">
       <ObjectId>49260</ObjectId>
-      <StateNumber>1126</StateNumber>
+      <StateNumber>1295</StateNumber>
       <Owner>user_for_sem1</Owner>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
     </sequence>
@@ -209,7 +209,7 @@ sequence|table|49260|49262|1
     <table id="33" parent="21" name="account">
       <ObjectId>41057</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1303</StateNumber>
     </table>
     <table id="34" parent="21" name="persistent_logins">
       <ObjectId>41050</ObjectId>
@@ -219,7 +219,7 @@ sequence|table|49260|49262|1
     <table id="35" parent="21" name="room">
       <ObjectId>49262</ObjectId>
       <Owner>user_for_sem1</Owner>
-      <StateNumber>1126</StateNumber>
+      <StateNumber>1304</StateNumber>
     </table>
     <table id="36" parent="21" name="task">
       <ObjectId>41067</ObjectId>
@@ -294,63 +294,69 @@ sequence|table|49260|49262|1
       <StateNumber>1057</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="48" parent="33" name="account_pkey">
+    <column id="48" parent="33" name="room_id">
+      <Position>12</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>1303</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="49" parent="33" name="account_pkey">
       <ObjectId>41063</ObjectId>
       <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="49" parent="33" name="account_pkey">
+    <key id="50" parent="33" name="account_pkey">
       <ObjectId>41064</ObjectId>
       <StateNumber>880</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>account_pkey</UnderlyingIndexName>
     </key>
-    <column id="50" parent="34" name="username">
+    <column id="51" parent="34" name="username">
       <Position>1</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="51" parent="34" name="series">
+    <column id="52" parent="34" name="series">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="34" name="token">
+    <column id="53" parent="34" name="token">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="53" parent="34" name="last_used">
+    <column id="54" parent="34" name="last_used">
       <Position>4</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <StateNumber>876</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="54" parent="34" name="persistent_logins_pkey">
+    <index id="55" parent="34" name="persistent_logins_pkey">
       <ObjectId>41053</ObjectId>
       <StateNumber>876</StateNumber>
       <ColNames>series</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
-    <key id="55" parent="34" name="persistent_logins_pkey">
+    <key id="56" parent="34" name="persistent_logins_pkey">
       <ObjectId>41054</ObjectId>
       <StateNumber>876</StateNumber>
       <ColNames>series</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>persistent_logins_pkey</UnderlyingIndexName>
     </key>
-    <column id="56" parent="35" name="id">
+    <column id="57" parent="35" name="id">
       <Position>1</Position>
       <DataType>bigint|0s</DataType>
       <NotNull>1</NotNull>
@@ -358,23 +364,17 @@ sequence|table|49260|49262|1
       <TypeId>20</TypeId>
       <IdentityKind>by-default</IdentityKind>
     </column>
-    <column id="57" parent="35" name="link">
+    <column id="58" parent="35" name="key">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>1126</StateNumber>
+      <StateNumber>1323</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="35" name="name">
+    <column id="59" parent="35" name="name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <StateNumber>1126</StateNumber>
       <TypeId>1043</TypeId>
-    </column>
-    <column id="59" parent="35" name="owner_id">
-      <Position>4</Position>
-      <DataType>bigint|0s</DataType>
-      <StateNumber>1126</StateNumber>
-      <TypeId>20</TypeId>
     </column>
     <index id="60" parent="35" name="room_pkey">
       <ObjectId>49268</ObjectId>
@@ -386,7 +386,7 @@ sequence|table|49260|49262|1
     <index id="61" parent="35" name="uk_62besqao9xhqog2vkbwjjp28p">
       <ObjectId>49270</ObjectId>
       <StateNumber>1128</StateNumber>
-      <ColNames>link</ColNames>
+      <ColNames>key</ColNames>
       <Unique>1</Unique>
     </index>
     <key id="62" parent="35" name="room_pkey">
@@ -399,7 +399,7 @@ sequence|table|49260|49262|1
     <key id="63" parent="35" name="uk_62besqao9xhqog2vkbwjjp28p">
       <ObjectId>49271</ObjectId>
       <StateNumber>1128</StateNumber>
-      <ColNames>link</ColNames>
+      <ColNames>key</ColNames>
       <UnderlyingIndexName>uk_62besqao9xhqog2vkbwjjp28p</UnderlyingIndexName>
     </key>
     <column id="64" parent="36" name="id">

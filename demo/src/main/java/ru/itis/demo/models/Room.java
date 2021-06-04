@@ -18,17 +18,6 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
-    private Long ownerId;
-    @ManyToMany
-    @JoinTable(name = "account",
-            joinColumns = @JoinColumn(name = "room_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"))
-    private List<User> participants;
+    private String key;
     private String name;
-
-//    @OneToMany(mappedBy = "room")
-//    private List<Task> tasks;
-
-    @Column(unique = true)
-    private String link;
 }

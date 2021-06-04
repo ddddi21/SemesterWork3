@@ -61,4 +61,6 @@ public class UserDetailsImpl implements UserDetails {
     }
 
     public String getUserPhone() { return user.getPhone(); }
+
+    public String getRoomId(){ return  user.getRoomId(); }
 }

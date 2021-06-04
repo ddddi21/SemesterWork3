@@ -6,4 +6,5 @@ import ru.itis.demo.models.Room;
 
 @Repository("roomRepository")
 public interface RoomRepository extends JpaRepository<Room,Long> {
+    Room findByKey(String roomId);
 }

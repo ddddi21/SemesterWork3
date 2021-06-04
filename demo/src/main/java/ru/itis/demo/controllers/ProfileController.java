@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import ru.itis.demo.repositories.UsersRepositoryInterface;
 import ru.itis.demo.security.details.UserDetailsImpl;
 import ru.itis.demo.security.details.UserDetailsServiceImpl;

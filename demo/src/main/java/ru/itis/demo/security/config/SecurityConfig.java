@@ -38,6 +38,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/editProfile").authenticated()
                 .antMatchers("/createTask").authenticated()
                 .antMatchers("/tasks").authenticated()
+                .antMatchers("/room").authenticated()
                 .antMatchers("/users").hasAuthority("ADMIN")
                 .antMatchers("/banAll").hasAuthority("ADMIN")
                 .and()

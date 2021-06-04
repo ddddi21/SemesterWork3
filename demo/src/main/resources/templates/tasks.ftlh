@@ -203,6 +203,10 @@
 <#if error??>
     <h5> ${error} </h5>
 </#if>
+<#if roomId??>
+    <h3>Welcome to ${roomId} </h3>
+</#if>
+<br>
 <div class="card-columns" id="message-list">
     <#list page.content as message>
         <div class="card my-3" data-id="${message.id}">

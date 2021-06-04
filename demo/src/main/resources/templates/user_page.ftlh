@@ -110,14 +110,19 @@
 
 </p>
 <br><br><br>
-<#--<div>-->
-<#--    <form method="post" action="/room/${message.id}" class="form-inline">-->
-<#--        <label>-->
-<#--            <input type="text" class="form-control" value="${code!}" placeholder="Search by tag" />-->
-<#--        </label>-->
-<#--        <button type="submit" class="btn btn-primary ml-2">Search</button>-->
-<#--    </form>-->
-<#--</div>-->
+<div>
+   <p> Want to enter to some room?</p>
+    <form method="get" action="/room" class="form-inline">
+        <label>
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+            <input type="text" class="form-control" name = "roomId" placeholder="Enter room code" />
+        </label>
+        <button type="submit" class="btn btn-primary ml-2">Join</button>
+    </form>
+    <#if error??>
+        <h5> ${error} </h5>
+    </#if>
+</div>
 <#--    <button type="button" class="btn"><a href="/editUser">Редактировать</a></button>-->
 <#--    <div>-->
 <#--        <h4>Your files:</h4>-->

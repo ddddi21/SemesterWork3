@@ -25,6 +25,7 @@ public class User {
     private String currentConfirmationCode;
     private String gender;
     private String phone;
+    private String roomId;
 
     @Enumerated(value = EnumType.STRING)
     private State state;

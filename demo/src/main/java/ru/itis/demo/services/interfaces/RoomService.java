@@ -6,5 +6,5 @@ import ru.itis.demo.models.Room;
 import ru.itis.demo.security.details.UserDetailsImpl;
 
 public interface RoomService {
-    Room createRoom(@AuthenticationPrincipal UserDetailsImpl userDetails, RoomDto roomDto);
+    Room enterToRoom(@AuthenticationPrincipal UserDetailsImpl userDetails, RoomDto roomDto);
 }

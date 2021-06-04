@@ -29,7 +29,9 @@ public class ControllersLogging {
     //Object, method naming
     @AfterReturning(pointcut = "selectAllMethodsAvaliable()", returning = "someValue")
     public void afterReturningAdvice(Object someValue) {
-        System.out.println("Value controllers: " + someValue.toString());
+        if(someValue != null) {
+            System.out.println("Value controllers: " + someValue.toString());
+        }
     }
 
     @AfterThrowing(pointcut = "selectAllMethodsAvaliable()", throwing = "e")

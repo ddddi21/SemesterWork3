@@ -90,14 +90,10 @@
     <br><br><br>
 
 <br><br><br>
-<#--<div>-->
-<#--    <form method="post" action="/room" class="form-inline">-->
-<#--        <label>-->
-<#--            <input type="text" class="form-control" value="${code!}" placeholder="Search by tag" />-->
-<#--        </label>-->
-<#--        <button type="submit" class="btn btn-primary ml-2">Search</button>-->
-<#--    </form>-->
-<#--</div>-->
+
+<div>
+    <a href="/chat">Go to chat</a>
+</div>
 </div>
 </body>
 </html>

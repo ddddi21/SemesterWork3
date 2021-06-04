@@ -11,14 +11,14 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:8099/editProfile
+PATCH http://localhost:8099/editProfile
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
 Content-Type: application/json
 
 {
   "password": "",
-"username": "manah2",
   "repeatPassword": "",
+  "username": "manah2",
   "gender": ""
 }
 ###

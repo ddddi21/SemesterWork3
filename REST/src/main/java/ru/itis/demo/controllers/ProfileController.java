@@ -1,5 +1,6 @@
 package ru.itis.demo.controllers;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -29,6 +30,7 @@ public class ProfileController {
     @Autowired
     private UsersServiceInterface usersService;
 
+    @ApiOperation(value = "страница пользователя")
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/profile")
     public ResponseEntity<UserDto> getProfilePage() throws IOException {

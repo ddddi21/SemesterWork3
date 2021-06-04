@@ -1,5 +1,6 @@
 package ru.itis.demo.controllers;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,6 +23,7 @@ public class SignUpController {
     @Autowired
     private SmsServiceImpl smsService;
 
+    @ApiOperation(value = "регистрация")
     @PostMapping("/signUp")
     public ResponseEntity<String> signUp(@RequestBody SignUpFormDto form) {
         UserDto userDto;

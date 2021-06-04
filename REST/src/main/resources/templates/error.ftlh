@@ -1,9 +1,0 @@
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Error</title>
-</head>
-<body>
-ой, чет не так
-</body>
-</html>

@@ -1,5 +1,8 @@
 package ru.itis.demo.controllers;
 
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -22,8 +25,10 @@ public class EditProfileController {
     @Autowired
     private UsersServiceInterfaceImpl usersServiceInterface;
 
+    @ApiOperation(value = "настройки пользователя")
+    @ApiResponses(value = {@ApiResponse(code = 200, message = "Успешно изменено", response = EditProfileDto.class)})
     @PreAuthorize("isAuthenticated()")
-    @PostMapping("/editProfile")
+    @PatchMapping("/editProfile")
     public ResponseEntity<String> updateProfile (@RequestBody EditProfileDto form){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl user = (UserDetailsImpl) authentication.getDetails();

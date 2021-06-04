@@ -1,5 +1,6 @@
 package ru.itis.demo.controllers;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,6 +34,7 @@ public class TasksController {
     private SmsServiceImpl smsService;
 
 
+    @ApiOperation(value = "удаление задачи")
     @PreAuthorize("isAuthenticated()")
     @DeleteMapping("/tasks/delete")
     public ResponseEntity<TaskDto> deleteTask(
@@ -50,6 +52,7 @@ public class TasksController {
         return ResponseEntity.ok().build();
     }
 
+    @ApiOperation(value = "изменение задачи")
     @PreAuthorize("isAuthenticated()")
     @PatchMapping("/tasks/{id}")
     public ResponseEntity<TaskDto> updateTask(
@@ -59,19 +62,14 @@ public class TasksController {
         return ResponseEntity.ok(tasksService.editTask(currentUser, form));
     }
 
+    @ApiOperation(value = "задачи пользователя")
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/tasks")
     public List<Task> tasks(){
-
         List<Task> page;
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getDetails();
-
-//        if (filter != null && !filter.isEmpty()) {
-//            page = allTasks.findAllByOwnerIdAndTitle(userDetails,filter);
-//        } else {
             page = tasksService.findAllTask(userDetails);
-//        }
         List<Task> invalidTasks = scheduledTasks.invalidTasks;
         List<Task> myInvalidTasks = new ArrayList<>();
         List <TaskForSmsDto>taskForSms = new ArrayList<>();
@@ -90,6 +88,7 @@ public class TasksController {
         return page;
     }
 
+    @ApiOperation(value = "добавление задач")
     @PreAuthorize("isAuthenticated()")
     @PostMapping("/addTask")
     public ResponseEntity<Task> addTask(@RequestBody TaskDto form){

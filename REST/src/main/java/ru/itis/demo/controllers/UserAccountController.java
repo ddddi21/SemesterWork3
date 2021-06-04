@@ -1,5 +1,6 @@
 package ru.itis.demo.controllers;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,6 +17,7 @@ public class UserAccountController {
     @Autowired
     private UsersServiceInterface usersServiceInterface;
 
+    @ApiOperation(value = "список всех пользователей")
     @GetMapping("/users")
     public ResponseEntity<List<UserDto>> getUsers(){
         return ResponseEntity.ok(usersServiceInterface.getAllUsers());

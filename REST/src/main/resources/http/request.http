@@ -1,0 +1,64 @@
+GET http://localhost:8099/profile
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+
+###
+POST http://localhost:8099/signIn
+Content-Type: application/json
+
+{
+  "email":"email1@gmail.com",
+  "password": "12345"
+}
+
+###
+POST http://localhost:8099/editProfile
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+Content-Type: application/json
+
+{
+  "password": "",
+"username": "manah2",
+  "repeatPassword": "",
+  "gender": ""
+}
+###
+GET http://localhost:8099/tasks
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+
+###
+POST http://localhost:8099/createTask
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+Content-Type: application/json
+
+{
+  "text": "test4",
+  "tag": "rest",
+  "deadline": "2021-06-05"
+}
+
+###
+
+PATCH http://localhost:8099/tasks/1
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+Content-Type: application/json
+
+{
+  "id": "28",
+  "text": "test3",
+  "title": "rest",
+  "deadline": "2021-06-08"
+}
+
+###
+
+DELETE http://localhost:8099/tasks/1/delete
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+Content-Type: application/json
+
+{
+  "text": "test3",
+  "title": "rest",
+  "deadline": "2021-06-08"
+}
+
+###

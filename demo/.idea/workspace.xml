@@ -2,12 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97955cb0-80c5-4217-adc7-2daad963e3e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/auth/JwtAuth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/config/JwtConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/filter/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/provider/JwtAuthProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../REST/src/main/resources/http/request.http" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demoWithRESTP/src/main/java/ru/itis/demo/jwt/config/JwtConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork1" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork2" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Semestrovka2k1s" beforeDir="false" afterPath="$PROJECT_DIR$/../Semestrovka2k1s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/CreateRoomController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fxApp" beforeDir="false" afterPath="$PROJECT_DIR$/../fxApp" afterDir="false" />
     </list>
     <list id="73568f9d-89b9-4714-af52-d4aa7b52ca60" name="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;" comment="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;&#10;&#10;This reverts commit 9a9a8371" />
@@ -207,12 +214,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ad008115" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a8b4e08" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ad008115" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@f8ff0c84" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a8b4e08" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d9b525a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -274,7 +281,8 @@
       <workItem from="1622769576644" duration="5451000" />
       <workItem from="1622775085537" duration="309000" />
       <workItem from="1622775450841" duration="2252000" />
-      <workItem from="1622777729516" duration="6456000" />
+      <workItem from="1622777729516" duration="6952000" />
+      <workItem from="1622797427538" duration="989000" />
     </task>
     <task id="LOCAL-00001" summary="sign up, some cookie, messages(need fix) etc">
       <created>1614981674044</created>
@@ -430,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622784050777</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="some clean up">
+      <created>1622784371824</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1622784371824</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -664,7 +679,8 @@
     <MESSAGE value="chat (i tried..)" />
     <MESSAGE value="chat (i tried 2.0 ..)" />
     <MESSAGE value="mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="mapper" />
+    <MESSAGE value="some clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="some clean up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -681,7 +697,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java</url>
-          <line>27</line>
+          <line>25</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -691,12 +707,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java</url>
-          <line>25</line>
+          <line>23</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java</url>
-          <line>29</line>
+          <line>27</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -751,7 +767,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>62</line>
+          <line>60</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -771,17 +787,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>64</line>
+          <line>62</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>66</line>
+          <line>64</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>67</line>
+          <line>65</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -791,42 +807,42 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>99</line>
+          <line>96</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>104</line>
+          <line>101</line>
           <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>111</line>
+          <line>108</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>110</line>
+          <line>107</line>
           <option name="timeStamp" value="71" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>106</line>
+          <line>103</line>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>103</line>
+          <line>100</line>
           <option name="timeStamp" value="73" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>101</line>
+          <line>98</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>112</line>
+          <line>109</line>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -836,13 +852,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/SignInController.java</url>
-          <line>26</line>
+          <line>24</line>
           <properties class="ru.itis.demo.controllers.SignInController" method="postSignInPage" />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java</url>
-          <line>60</line>
+          <line>58</line>
           <properties class="ru.itis.demo.controllers.TasksController" />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
@@ -854,7 +870,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/main/resources/templates/chat.html</url>
           <line>150</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="83" />
         </line-breakpoint>
       </breakpoints>

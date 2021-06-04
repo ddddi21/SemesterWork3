@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97955cb0-80c5-4217-adc7-2daad963e3e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/auth/JwtAuth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/config/JwtConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/filter/JwtAuthFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../REST/src/main/java/ru/itis/demo/security/provider/JwtAuthProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../REST/src/main/resources/http/request.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demoWithRESTP/src/main/java/ru/itis/demo/jwt/config/JwtConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina-Dilyara-11-908" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" beforeDir="false" afterPath="$PROJECT_DIR$/../Askhadullina_Dilyara_11-908_2c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork1" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SemesterWork2" beforeDir="false" afterPath="$PROJECT_DIR$/../SemesterWork2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Semestrovka2k1s" beforeDir="false" afterPath="$PROJECT_DIR$/../Semestrovka2k1s" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/controllers/TasksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/security/details/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/security/details/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/EmailServiceInterfaceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/itis/demo/services/implementations/EmailServiceInterfaceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mail.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mail.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign_in_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_in_page.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sign_up_page.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user_page.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../fxApp" beforeDir="false" afterPath="$PROJECT_DIR$/../fxApp" afterDir="false" />
     </list>
     <list id="73568f9d-89b9-4714-af52-d4aa7b52ca60" name="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;" comment="Revert &quot;sign up, some cookie, messages(need fix) etc&quot;&#10;&#10;This reverts commit 9a9a8371" />
@@ -219,7 +220,16 @@
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a8b4e08" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d9b525a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@83928a70" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@48cea368" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@48cea368" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59667482" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -283,6 +293,7 @@
       <workItem from="1622775450841" duration="2252000" />
       <workItem from="1622777729516" duration="6952000" />
       <workItem from="1622797427538" duration="989000" />
+      <workItem from="1622806947210" duration="1462000" />
     </task>
     <task id="LOCAL-00001" summary="sign up, some cookie, messages(need fix) etc">
       <created>1614981674044</created>

@@ -80,7 +80,7 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container -->
 </nav><!-- /.navbar -->
-    <h3><@spring.message 'user_page.title'></@spring.message> ${userEmail}</h3>
+    <h3><@spring.message 'user_page.title'></@spring.message>, ${userEmail}</h3>
 
 </div><!-- /.container-fluid -->
     <#if imagepath?has_content>

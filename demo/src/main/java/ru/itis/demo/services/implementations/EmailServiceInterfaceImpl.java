@@ -20,7 +20,7 @@ public class EmailServiceInterfaceImpl implements EmailServiceInterface {
     public void sendEmail(UserDto userDto) {
         Map<String, String> parameters = new HashMap<>();
         parameters.put("email", userDto.getEmail());
-        parameters.put("link", "http://localhost:8090/" + "confirm/" + userDto.getCode());
+        parameters.put("link", "http://localhost:8099/" + "confirm/" + userDto.getCode());
         sendMail(parameters, "mail.ftl", userDto.getEmail(), "Confirm your registration");
     }
 

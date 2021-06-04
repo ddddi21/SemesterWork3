@@ -353,7 +353,7 @@
 <div class="text-center" style="padding:50px 0">
     <#if error?has_content>
         <div class="etc-login-form">
-            <p>Error: ${error}</p>
+            <p>${error}</p>
         </div>
     <#else>
     </#if>
@@ -362,12 +362,12 @@
             <p> ${message} </p>
         </div>
     </#if>
-<#--    <#if info?has_content>-->
-<#--        <div class="reg-container">-->
-<#--            <p>${info}</p>-->
-<#--        </div>-->
+    <#if info?has_content>
+        <div class="reg-container">
+            <p>${info}</p>
+        </div>
 <#--    <#else>-->
-<#--    </#if>-->
+    </#if>
     <div class="logo"><@spring.message 'sign_in_page.title'/></div>
     <!-- Main Form -->
     <div class="login-form-1">
@@ -399,9 +399,6 @@
                 <p><@spring.message 'sign_in_page.forgot'/><a href="#"><@spring.message 'sign_in_page.code_send_click'/></a></p>
                 <p><@spring.message 'sign_in_page.new_user'/><a href="/signUp"><@spring.message 'sign_in_page.to_sign_up'/></a></p>
                 <br>
-                <#if error?has_content>
-                        <p>${error}</p>
-                </#if>
             </div>
         </form>
     </div>

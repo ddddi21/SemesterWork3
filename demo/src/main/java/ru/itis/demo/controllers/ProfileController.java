@@ -36,7 +36,7 @@ public class ProfileController {
             //костыль
         }
 
-        model.addAttribute("userEmail", user.getUsername());
+        model.addAttribute("userEmail", user.getAkaName());
         model.addAttribute("imagepath", imgAsBase64);
         return "user_page";
     }

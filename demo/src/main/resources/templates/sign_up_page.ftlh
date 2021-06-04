@@ -321,12 +321,7 @@
 
 </div>
 
-<#if error?has_content>
-    <div class="etc-login-form">
-        <p>Error: ${error}</p>
-    </div>
-<#else>
-</#if>
+
 <#if message?has_content>
     <div class="etc-login-form">
         <p> ${message} </p>

@@ -107,7 +107,7 @@ public class TasksController {
         }
         System.out.println("taskForSms:" + taskForSms.toString());
         if(!taskForSms.isEmpty()) {
-            smsService.sendSms(userDetails.getUserPhone(), "These tasks have expired:\n" + taskForSms.toString());
+//            smsService.sendSms(userDetails.getUserPhone(), "These tasks have expired:\n" + taskForSms.toString());
         }
         model.addAttribute("page", page);
         model.addAttribute("url", "/tasks");

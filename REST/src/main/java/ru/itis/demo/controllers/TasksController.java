@@ -34,13 +34,18 @@ public class TasksController {
 
 
     @PreAuthorize("isAuthenticated()")
-    @DeleteMapping("/tasks/{user}/delete")
+    @DeleteMapping("/tasks/delete")
     public ResponseEntity<TaskDto> deleteTask(
-            @PathVariable Long user,
-            @RequestParam(required = false) Task task
+            @RequestBody TaskDto form
     ) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl currentUser = (UserDetailsImpl) authentication.getDetails();
+        Task task = Task.builder()
+                .deadline(form.getDeadline())
+                .id(form.getId())
+                .text(form.getText())
+                .title(form.getTitle())
+                .build();
         tasksService.deleteTask(currentUser,task);
         return ResponseEntity.ok().build();
     }
@@ -48,18 +53,10 @@ public class TasksController {
     @PreAuthorize("isAuthenticated()")
     @PatchMapping("/tasks/{id}")
     public ResponseEntity<TaskDto> updateTask(
-            @PathVariable("id") Long id,
-            @RequestParam("text") String text,
-            @RequestParam("title") String title,
-            @RequestParam("deadline") String deadline) {
+            @PathVariable("id") Long id,@RequestBody TaskDto form) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl currentUser = (UserDetailsImpl) authentication.getDetails();
-        Task task = new Task();
-        task.setId(id);
-        task.setDeadline(deadline);
-        task.setText(text);
-        task.setTitle(title);
-        return ResponseEntity.ok(tasksService.editTask(currentUser, TaskDto.from(task)));
+        return ResponseEntity.ok(tasksService.editTask(currentUser, form));
     }
 
     @PreAuthorize("isAuthenticated()")

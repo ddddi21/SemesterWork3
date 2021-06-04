@@ -28,7 +28,7 @@ public class UsersServiceInterfaceImpl implements UsersServiceInterface {
         List<User> users = usersRepositoryInterface.findAll();
         List<UserDto> userDtoList = new ArrayList<>();
         for(User user:users){
-            userDtoList.add(UserMapper.INSTANCE.userToUserDTO(user));
+            userDtoList.add(UserDto.from(user));
         }
         return userDtoList;
     }

@@ -1,28 +1,24 @@
 package ru.itis.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import ru.itis.demo.dto.UserDto;
 import ru.itis.demo.services.interfaces.UsersServiceInterface;
 
-@Controller
+import java.util.List;
+
+@RestController
 public class UserAccountController {
     @Autowired
     private UsersServiceInterface usersServiceInterface;
 
     @GetMapping("/users")
-    public String getUsersPage(Model model){
-        model.addAttribute("usersList", usersServiceInterface.getAllUsers());
-        return "all_user_page";
+    public ResponseEntity<List<UserDto>> getUsers(){
+        return ResponseEntity.ok(usersServiceInterface.getAllUsers());
     }
-
-    @PostMapping("/banAll")
-    public String banUsers(){
-        usersServiceInterface.banAll();
-        return "redirect:/users";
-    }
-
 
 }

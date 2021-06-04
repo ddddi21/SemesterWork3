@@ -43,7 +43,7 @@ Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwu
 Content-Type: application/json
 
 {
-  "id": "28",
+  "id": "27",
   "text": "test3",
   "title": "rest",
   "deadline": "2021-06-08"
@@ -51,14 +51,30 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:8099/tasks/1/delete
+DELETE http://localhost:8099/tasks/delete
 Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
 Content-Type: application/json
 
 {
+  "id": "27",
   "text": "test3",
   "title": "rest",
   "deadline": "2021-06-08"
 }
 
 ###
+GET http://localhost:8099/room
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJlbWFpbDFAZ21haWwuY29tIn0.pTN0NSBh4squp-pmBLkDMcqWNc3Gq0-CBJxxeK3uyE0
+Content-Type: application/json
+
+{
+  "roomId": "12345"
+}
+
+###
+GET http://localhost:8099/users
+###
+
+
+###
+
